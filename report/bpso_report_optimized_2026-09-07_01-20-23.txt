@@ -1,0 +1,112 @@
+======================================================================
+--- BPSO FEATURE SELECTION (OPTIMIZED) ---
+======================================================================
+
+[STEP 1] Loading training data...
+----------------------------------------------------------------------
+✓ Data Loaded Successfully
+  X_train shape: (9939, 21)
+  Total Initial Features: 21
+  Training samples: 9939
+
+[STEP 2] BPSO Parameters Setup (Optimized)
+----------------------------------------------------------------------
+Particles: 50 (بهتر شده: 30 → 50)
+Iterations: 100
+Inertia (w): 0.7
+Cognitive (c1): 2.0
+Social (c2): 2.0
+Feature constraints: [8, 15]
+Early Stopping Patience: 30 (اضافه شد)
+Restart Ratio: 0.5 (بهتر شده: 0.7 → 0.5)
+
+[STEP 3] Initializing particles...
+----------------------------------------------------------------------
+✓ 50 particles initialized
+
+[STEP 4] Starting BPSO Optimization...
+----------------------------------------------------------------------
+Iteration 001/100 | Best CV Accuracy: 0.7034 | Selected Features: 10
+Iteration 005/100 | Best CV Accuracy: 0.7041 | Selected Features: 9
+Iteration 010/100 | Best CV Accuracy: 0.7045 | Selected Features: 8
+Iteration 015/100 | Best CV Accuracy: 0.7047 | Selected Features: 9
+Iteration 020/100 | Best CV Accuracy: 0.7047 | Selected Features: 9
+Iteration 025/100 | Best CV Accuracy: 0.7052 | Selected Features: 8
+Iteration 030/100 | Best CV Accuracy: 0.7062 | Selected Features: 8
+Iteration 035/100 | Best CV Accuracy: 0.7062 | Selected Features: 8
+Iteration 040/100 | Best CV Accuracy: 0.7063 | Selected Features: 8
+Iteration 045/100 | Best CV Accuracy: 0.7072 | Selected Features: 8
+Iteration 050/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 055/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 060/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 065/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+
+>>> No improvement for 20 iterations. Restarting particles...
+Iteration 070/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 075/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 080/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 085/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+
+>>> No improvement for 20 iterations. Restarting particles...
+Iteration 090/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 095/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+Iteration 100/100 | Best CV Accuracy: 0.7081 | Selected Features: 8
+
+[STEP 5] Extracting selected features...
+----------------------------------------------------------------------
+✓ Final Best CV Accuracy: 0.7081
+✓ Total Selected Features: 8 out of 21
+✓ Reduction: 61.9%
+✓ Diversity Restarts: 2
+
+Selected Features:
+  1. loc
+  2. v(g)
+  3. ev(g)
+  4. i
+  5. b
+  6. lOBlank
+  7. locCodeAndComment
+  8. branchCount
+
+[STEP 6] Saving convergence curve...
+----------------------------------------------------------------------
+✓ Convergence curve saved to: ../../report/convergence_curve_2026-09-07_01-20-23.png
+
+[STEP 7] Filtering X_train...
+----------------------------------------------------------------------
+✓ X_train filtered: (9939, 8)
+
+[STEP 8] Loading and filtering X_test...
+----------------------------------------------------------------------
+✓ X_test loaded: (2485, 21) (21 features)
+✓ X_test filtered: (2485, 8)
+✅ X_train and X_test both have 8 features now!
+
+[STEP 9] Saving filtered datasets...
+----------------------------------------------------------------------
+✓ Saved: ../../data/processed/X_train_selected.csv
+✓ Saved: ../../data/processed/X_test_selected.csv
+✓ Saved: ../../data/processed/selected_feature_names.txt
+
+======================================================================
+--- BPSO FEATURE SELECTION (OPTIMIZED) COMPLETED ---
+======================================================================
+
+📊 SUMMARY:
+  Original features: 21
+  Selected features: 8
+  Reduction: 61.9%
+  CV Accuracy: 0.7081
+  Total iterations executed: 100
+  Diversity restarts: 2
+
+📁 OUTPUT FILES:
+  ✓ X_train_selected.csv
+  ✓ X_test_selected.csv
+  ✓ selected_feature_names.txt
+  ✓ convergence_curve_*.png (visualization)
+
+✅ Ready for Phase 3: Decision Tree!
+📝 Report: ../../report/bpso_report_optimized_2026-09-07_01-20-23.txt
+======================================================================

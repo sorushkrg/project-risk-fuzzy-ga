@@ -1,0 +1,142 @@
+================================================================================
+C4.5 DECISION TREE FROM SCRATCH - V5
+================================================================================
+
+V5 fixes:
+  FIX A: candidate thresholds no longer restricted to class-change boundaries
+  FIX B: wider max_depth / smaller min_samples_leaf
+  FIX C: threshold search enforces specificity floor >= 0.30
+
+[STEP 1] Loading data...
+✓ Using: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/data/processed/X_train_selected_ga.csv
+✓ X_train: (9939, 8)
+✓ X_test:  (2485, 8)
+✓ Features: ['loc', 'v(g)', 'ev(g)', 'iv(g)', 'i', 'lOCode', 'lOBlank', 'locCodeAndComment']
+✓ y_train: {0: 5522, 1: 4417}
+✓ y_test:  {0: 1381, 1: 1104}
+
+[STEP 2] C4.5 Hyperparameter Optimization
+--------------------------------------------------------------------------------
+Parameter Grid:
+  max_depth: [7, 8, 9]
+  min_samples_split: [10, 15]
+  min_samples_leaf: [3, 5]
+  confidence_factor: [0.25]
+Total combinations: 12
+Total model fits: 60
+[01/12] depth=7, split=10, leaf=3, CF=0.25 | CV F1=0.6048 ±0.0212 | Train F1=0.6252 | Gap=0.0204
+[02/12] depth=7, split=10, leaf=5, CF=0.25 | CV F1=0.6028 ±0.0243 | Train F1=0.6240 | Gap=0.0212
+[03/12] depth=7, split=15, leaf=3, CF=0.25 | CV F1=0.6047 ±0.0214 | Train F1=0.6246 | Gap=0.0199
+[04/12] depth=7, split=15, leaf=5, CF=0.25 | CV F1=0.6027 ±0.0245 | Train F1=0.6234 | Gap=0.0207
+[05/12] depth=8, split=10, leaf=3, CF=0.25 | CV F1=0.6118 ±0.0153 | Train F1=0.6322 | Gap=0.0204
+[06/12] depth=8, split=10, leaf=5, CF=0.25 | CV F1=0.6129 ±0.0168 | Train F1=0.6327 | Gap=0.0198
+[07/12] depth=8, split=15, leaf=3, CF=0.25 | CV F1=0.6116 ±0.0158 | Train F1=0.6315 | Gap=0.0198
+[08/12] depth=8, split=15, leaf=5, CF=0.25 | CV F1=0.6122 ±0.0175 | Train F1=0.6315 | Gap=0.0193
+[09/12] depth=9, split=10, leaf=3, CF=0.25 | CV F1=0.6292 ±0.0248 | Train F1=0.6529 | Gap=0.0237
+[10/12] depth=9, split=10, leaf=5, CF=0.25 | CV F1=0.6277 ±0.0266 | Train F1=0.6543 | Gap=0.0266
+[11/12] depth=9, split=15, leaf=3, CF=0.25 | CV F1=0.6295 ±0.0249 | Train F1=0.6521 | Gap=0.0226
+[12/12] depth=9, split=15, leaf=5, CF=0.25 | CV F1=0.6278 ±0.0273 | Train F1=0.6531 | Gap=0.0254
+
+[GRID SEARCH TOP 10]
+ max_depth  min_samples_split  min_samples_leaf  confidence_factor  mean_cv_f1  std_cv_f1  mean_train_f1   f1_gap
+         9                 15                 3               0.25    0.629527   0.024863       0.652143 0.022616
+         9                 10                 3               0.25    0.629182   0.024817       0.652918 0.023736
+         9                 15                 5               0.25    0.627784   0.027291       0.653138 0.025354
+         9                 10                 5               0.25    0.627697   0.026638       0.654343 0.026646
+         8                 10                 5               0.25    0.612854   0.016765       0.632700 0.019846
+         8                 15                 5               0.25    0.612232   0.017460       0.631523 0.019291
+         8                 10                 3               0.25    0.611838   0.015327       0.632243 0.020405
+         8                 15                 3               0.25    0.611641   0.015771       0.631480 0.019840
+         7                 10                 3               0.25    0.604757   0.021209       0.625163 0.020406
+         7                 15                 3               0.25    0.604732   0.021426       0.624601 0.019869
+
+✓ Best Parameters:
+  max_depth: 9
+  min_samples_split: 15
+  min_samples_leaf: 3
+  confidence_factor: 0.25
+✓ Best CV F1: 0.6295
+✓ Train-CV Gap: 0.0226
+
+[OVERFITTING CHECK]
+Overfitting Risk: LOW
+
+[STEP 3] Training final C4.5 model...
+✓ Tree depth: 9
+✓ Nodes after pruning:  141
+✓ Leaves after pruning:  71
+✓ Pruning changes: 40
+
+[STEP 4] Optimizing decision threshold (specificity-constrained)...
+✓ Chosen threshold: 0.36 | OOF F1: 0.6843 | OOF Specificity: 0.5364
+
+[STEP 5] Final Test Evaluation
+
+================================================================================
+C4.5 FINAL TEST PERFORMANCE
+================================================================================
+Prediction threshold: 0.360
+Accuracy:             0.6732
+Balanced Accuracy:    0.6922
+Precision:            0.5906
+Recall/Sensitivity:   0.8623
+Specificity:          0.5221
+F1-Score:             0.7010
+ROC-AUC:              0.7676
+PR-AUC:               0.7099
+MCC:                  0.4001
+
+Confusion Matrix:
+TN=721, FP=660, FN=152, TP=952
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.52      0.64      1381
+           1       0.59      0.86      0.70      1104
+
+    accuracy                           0.67      2485
+   macro avg       0.71      0.69      0.67      2485
+weighted avg       0.72      0.67      0.67      2485
+
+
+[STEP 6] Feature importance
+          feature  importance  importance_percent
+          lOBlank    0.437618           43.761753
+              loc    0.329153           32.915252
+           lOCode    0.056701            5.670138
+             v(g)    0.052608            5.260827
+                i    0.043037            4.303686
+            iv(g)    0.033457            3.345684
+            ev(g)    0.027469            2.746907
+locCodeAndComment    0.019958            1.995753
+
+[STEP 7] Extracting rules
+✓ Rules extracted: 71
+ rule_id                                                                                                                                                                                         condition  predicted_class  confidence  samples  weighted_samples  defect_prob  depth
+       0                          loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode <= 0.011761 AND lOCode <= 0.008021 AND i <= 0.075269 AND iv(g) <= 0.151075                0    0.604466      627        620.100465     0.395534      8
+       1     loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode <= 0.011761 AND lOCode <= 0.008021 AND i <= 0.075269 AND iv(g) > 0.151075 AND iv(g) <= 0.324329                0    0.961538       26         23.623727     0.038462      9
+       2      loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode <= 0.011761 AND lOCode <= 0.008021 AND i <= 0.075269 AND iv(g) > 0.151075 AND iv(g) > 0.324329                1    0.666667        3          3.150115     0.666667      9
+       3                                                 loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode <= 0.011761 AND lOCode <= 0.008021 AND i > 0.075269                0    0.928571       28         25.648757     0.071429      7
+       4                                                                   loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode <= 0.011761 AND lOCode > 0.008021                1    1.000000       18         20.251528     1.000000      6
+       5                          loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode > 0.011761 AND i <= 0.056232 AND lOCode <= 0.015739 AND lOCode <= 0.012156                0    0.920000       25         22.948920     0.080000      8
+       6                           loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode > 0.011761 AND i <= 0.056232 AND lOCode <= 0.015739 AND lOCode > 0.012156                1    1.000000        4          4.500340     1.000000      8
+       7                                                  loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode > 0.011761 AND i <= 0.056232 AND lOCode > 0.015739                0    0.977099      131        118.568301     0.022901      7
+       8 loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode > 0.011761 AND i > 0.056232 AND lOBlank <= 0.022830 AND lOBlank <= 0.022255 AND lOBlank <= 0.000008                0    0.820000      550        517.258903     0.180000      9
+       9  loc <= 0.106064 AND lOBlank <= 0.045515 AND v(g) <= 0.567308 AND ev(g) <= 0.390625 AND lOCode > 0.011761 AND i > 0.056232 AND lOBlank <= 0.022830 AND lOBlank <= 0.022255 AND lOBlank > 0.000008                1    1.000000       61         68.630179     1.000000      9
+
+[STEP 9] Saving model and configuration
+✓ Model saved: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/models/c45_model_v5.pkl
+✓ Config saved: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/models/c45_config_v5.json
+
+================================================================================
+C4.5 V5 TRAINING COMPLETED
+================================================================================
+Best parameters: {'max_depth': 9, 'min_samples_split': 15, 'min_samples_leaf': 3, 'confidence_factor': 0.25}
+Threshold: 0.36
+Test F1: 0.7010
+Test Specificity: 0.5221
+ROC-AUC: 0.7676
+Rules: 71
+Tree depth: 9
+Report: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/report/c45_report_v5_2026-09-07_10-04-20.txt

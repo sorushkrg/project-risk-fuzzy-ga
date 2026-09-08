@@ -1,0 +1,8 @@
+1. loc
+2. v(g)
+3. ev(g)
+4. iv(g)
+5. i
+6. lOCode
+7. lOBlank
+8. locCodeAndComment

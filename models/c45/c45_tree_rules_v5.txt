@@ -1,0 +1,211 @@
+loc <= 0.106064 (InformationGain=0.061241, GainRatio=0.062356, SplitInfo=0.982120)
+    lOBlank <= 0.045515 (InformationGain=0.024938, GainRatio=0.025068, SplitInfo=0.994800)
+        v(g) <= 0.567308 (InformationGain=0.003191, GainRatio=0.167611, SplitInfo=0.019039)
+            ev(g) <= 0.390625 (InformationGain=0.002027, GainRatio=0.053342, SplitInfo=0.037993)
+                lOCode <= 0.011761 (InformationGain=0.020334, GainRatio=0.026534, SplitInfo=0.766349)
+                    lOCode <= 0.008021 (InformationGain=0.035423, GainRatio=0.185921, SplitInfo=0.190528)
+                        i <= 0.075269 (InformationGain=0.015921, GainRatio=0.068129, SplitInfo=0.233689)
+                            iv(g) <= 0.151075 (InformationGain=0.014060, GainRatio=0.056549, SplitInfo=0.248627)
+                                LEAF class=0 samples=627 probabilities={0: 0.604466, 1: 0.395534}
+                            iv(g) > 0.151075 (InformationGain=0.014060, GainRatio=0.056549, SplitInfo=0.248627)
+                                iv(g) <= 0.324329 (InformationGain=0.201278, GainRatio=0.385157, SplitInfo=0.522587)
+                                    LEAF class=0 samples=26 probabilities={0: 0.961538, 1: 0.038462}
+                                iv(g) > 0.324329 (InformationGain=0.201278, GainRatio=0.385157, SplitInfo=0.522587)
+                                    LEAF class=1 samples=3 probabilities={0: 0.333333, 1: 0.666667}
+                        i > 0.075269 (InformationGain=0.015921, GainRatio=0.068129, SplitInfo=0.233689)
+                            LEAF class=0 samples=28 probabilities={0: 0.928571, 1: 0.071429}
+                    lOCode > 0.008021 (InformationGain=0.035423, GainRatio=0.185921, SplitInfo=0.190528)
+                        LEAF class=1 samples=18 probabilities={0: 0.0, 1: 1.0}
+                lOCode > 0.011761 (InformationGain=0.020334, GainRatio=0.026534, SplitInfo=0.766349)
+                    i <= 0.056232 (InformationGain=0.010439, GainRatio=0.031637, SplitInfo=0.329963)
+                        lOCode <= 0.015739 (InformationGain=0.060639, GainRatio=0.086970, SplitInfo=0.697239)
+                            lOCode <= 0.012156 (InformationGain=0.417845, GainRatio=0.649152, SplitInfo=0.643679)
+                                LEAF class=0 samples=25 probabilities={0: 0.92, 1: 0.08}
+                            lOCode > 0.012156 (InformationGain=0.417845, GainRatio=0.649152, SplitInfo=0.643679)
+                                LEAF class=1 samples=4 probabilities={0: 0.0, 1: 1.0}
+                        lOCode > 0.015739 (InformationGain=0.060639, GainRatio=0.086970, SplitInfo=0.697239)
+                            LEAF class=0 samples=131 probabilities={0: 0.977099, 1: 0.022901}
+                    i > 0.056232 (InformationGain=0.010439, GainRatio=0.031637, SplitInfo=0.329963)
+                        lOBlank <= 0.022830 (InformationGain=0.020967, GainRatio=0.021655, SplitInfo=0.968239)
+                            lOBlank <= 0.022255 (InformationGain=0.036652, GainRatio=0.037203, SplitInfo=0.985172)
+                                lOBlank <= 0.000008 (InformationGain=0.226452, GainRatio=0.434584, SplitInfo=0.521079)
+                                    LEAF class=0 samples=550 probabilities={0: 0.82, 1: 0.18}
+                                lOBlank > 0.000008 (InformationGain=0.226452, GainRatio=0.434584, SplitInfo=0.521079)
+                                    LEAF class=1 samples=61 probabilities={0: 0.0, 1: 1.0}
+                            lOBlank > 0.022255 (InformationGain=0.036652, GainRatio=0.037203, SplitInfo=0.985172)
+                                LEAF class=0 samples=847 probabilities={0: 0.898465, 1: 0.101535}
+                        lOBlank > 0.022830 (InformationGain=0.020967, GainRatio=0.021655, SplitInfo=0.968239)
+                            lOBlank <= 0.045212 (InformationGain=0.223566, GainRatio=0.397066, SplitInfo=0.563044)
+                                LEAF class=1 samples=105 probabilities={0: 0.0, 1: 1.0}
+                            lOBlank > 0.045212 (InformationGain=0.223566, GainRatio=0.397066, SplitInfo=0.563044)
+                                LEAF class=0 samples=818 probabilities={0: 0.781174, 1: 0.218826}
+            ev(g) > 0.390625 (InformationGain=0.002027, GainRatio=0.053342, SplitInfo=0.037993)
+                LEAF class=0 samples=14 probabilities={0: 1.0, 1: 0.0}
+        v(g) > 0.567308 (InformationGain=0.003191, GainRatio=0.167611, SplitInfo=0.019039)
+            LEAF class=1 samples=5 probabilities={0: 0.0, 1: 1.0}
+    lOBlank > 0.045515 (InformationGain=0.024938, GainRatio=0.025068, SplitInfo=0.994800)
+        lOBlank <= 0.068014 (InformationGain=0.078606, GainRatio=0.216426, SplitInfo=0.363198)
+            LEAF class=1 samples=162 probabilities={0: 0.0, 1: 1.0}
+        lOBlank > 0.068014 (InformationGain=0.078606, GainRatio=0.216426, SplitInfo=0.363198)
+            lOBlank <= 0.068218 (InformationGain=0.043200, GainRatio=0.049958, SplitInfo=0.864719)
+                i <= 0.324288 (InformationGain=0.011245, GainRatio=0.062970, SplitInfo=0.178580)
+                    lOCode <= 0.118113 (InformationGain=0.011356, GainRatio=0.064669, SplitInfo=0.175605)
+                        i <= 0.053265 (InformationGain=0.008992, GainRatio=0.062885, SplitInfo=0.142990)
+                            LEAF class=0 samples=15 probabilities={0: 1.0, 1: 0.0}
+                        i > 0.053265 (InformationGain=0.008992, GainRatio=0.062885, SplitInfo=0.142990)
+                            i <= 0.056562 (InformationGain=0.017203, GainRatio=0.123277, SplitInfo=0.139546)
+                                LEAF class=1 samples=12 probabilities={0: 0.25, 1: 0.75}
+                            i > 0.056562 (InformationGain=0.017203, GainRatio=0.123277, SplitInfo=0.139546)
+                                lOCode <= 0.114110 (InformationGain=0.004928, GainRatio=0.055344, SplitInfo=0.089037)
+                                    LEAF class=0 samples=667 probabilities={0: 0.787106, 1: 0.212894}
+                                lOCode > 0.114110 (InformationGain=0.004928, GainRatio=0.055344, SplitInfo=0.089037)
+                                    LEAF class=1 samples=7 probabilities={0: 0.428571, 1: 0.571429}
+                    lOCode > 0.118113 (InformationGain=0.011356, GainRatio=0.064669, SplitInfo=0.175605)
+                        LEAF class=0 samples=20 probabilities={0: 1.0, 1: 0.0}
+                i > 0.324288 (InformationGain=0.011245, GainRatio=0.062970, SplitInfo=0.178580)
+                    LEAF class=0 samples=21 probabilities={0: 1.0, 1: 0.0}
+            lOBlank > 0.068218 (InformationGain=0.043200, GainRatio=0.049958, SplitInfo=0.864719)
+                lOBlank <= 0.090843 (InformationGain=0.116907, GainRatio=0.232706, SplitInfo=0.502378)
+                    LEAF class=1 samples=172 probabilities={0: 0.0, 1: 1.0}
+                lOBlank > 0.090843 (InformationGain=0.116907, GainRatio=0.232706, SplitInfo=0.502378)
+                    ev(g) <= 0.296875 (InformationGain=0.002504, GainRatio=0.087539, SplitInfo=0.028607)
+                        v(g) <= 0.000858 (InformationGain=0.028333, GainRatio=0.057176, SplitInfo=0.495544)
+                            locCodeAndComment <= 0.375000 (InformationGain=0.053834, GainRatio=0.206149, SplitInfo=0.261140)
+                                LEAF class=0 samples=173 probabilities={0: 0.872832, 1: 0.127168}
+                            locCodeAndComment > 0.375000 (InformationGain=0.053834, GainRatio=0.206149, SplitInfo=0.261140)
+                                LEAF class=1 samples=7 probabilities={0: 0.285714, 1: 0.714286}
+                        v(g) > 0.000858 (InformationGain=0.028333, GainRatio=0.057176, SplitInfo=0.495544)
+                            v(g) <= 0.019226 (InformationGain=0.021648, GainRatio=0.150790, SplitInfo=0.143567)
+                                LEAF class=1 samples=25 probabilities={0: 0.0, 1: 1.0}
+                            v(g) > 0.019226 (InformationGain=0.021648, GainRatio=0.150790, SplitInfo=0.143567)
+                                LEAF class=0 samples=1360 probabilities={0: 0.581618, 1: 0.418382}
+                    ev(g) > 0.296875 (InformationGain=0.002504, GainRatio=0.087539, SplitInfo=0.028607)
+                        LEAF class=0 samples=5 probabilities={0: 1.0, 1: 0.0}
+loc > 0.106064 (InformationGain=0.061241, GainRatio=0.062356, SplitInfo=0.982120)
+    loc <= 0.250296 (InformationGain=0.029694, GainRatio=0.029993, SplitInfo=0.990014)
+        loc <= 0.108864 (InformationGain=0.011245, GainRatio=0.103304, SplitInfo=0.108849)
+            LEAF class=1 samples=30 probabilities={0: 0.0, 1: 1.0}
+        loc > 0.108864 (InformationGain=0.011245, GainRatio=0.103304, SplitInfo=0.108849)
+            i <= 0.610270 (InformationGain=0.003643, GainRatio=0.024013, SplitInfo=0.151706)
+                v(g) <= 0.365460 (InformationGain=0.002778, GainRatio=0.011970, SplitInfo=0.232089)
+                    loc <= 0.108908 (InformationGain=0.003712, GainRatio=0.016466, SplitInfo=0.225422)
+                        iv(g) <= 0.136364 (InformationGain=0.086342, GainRatio=0.168726, SplitInfo=0.511729)
+                            lOBlank <= 0.170455 (InformationGain=0.078848, GainRatio=0.180611, SplitInfo=0.436559)
+                                locCodeAndComment <= 0.312500 (InformationGain=0.036451, GainRatio=0.087015, SplitInfo=0.418904)
+                                    LEAF class=0 samples=59 probabilities={0: 0.610169, 1: 0.389831}
+                                locCodeAndComment > 0.312500 (InformationGain=0.036451, GainRatio=0.087015, SplitInfo=0.418904)
+                                    LEAF class=1 samples=5 probabilities={0: 0.2, 1: 0.8}
+                            lOBlank > 0.170455 (InformationGain=0.078848, GainRatio=0.180611, SplitInfo=0.436559)
+                                LEAF class=0 samples=7 probabilities={0: 1.0, 1: 0.0}
+                        iv(g) > 0.136364 (InformationGain=0.086342, GainRatio=0.168726, SplitInfo=0.511729)
+                            LEAF class=0 samples=10 probabilities={0: 1.0, 1: 0.0}
+                    loc > 0.108908 (InformationGain=0.003712, GainRatio=0.016466, SplitInfo=0.225422)
+                        loc <= 0.111842 (InformationGain=0.012566, GainRatio=0.108382, SplitInfo=0.115940)
+                            LEAF class=1 samples=29 probabilities={0: 0.0, 1: 1.0}
+                        loc > 0.111842 (InformationGain=0.012566, GainRatio=0.108382, SplitInfo=0.115940)
+                            loc <= 0.111931 (InformationGain=0.007245, GainRatio=0.039594, SplitInfo=0.182976)
+                                LEAF class=0 samples=60 probabilities={0: 0.766667, 1: 0.233333}
+                            loc > 0.111931 (InformationGain=0.007245, GainRatio=0.039594, SplitInfo=0.182976)
+                                LEAF class=1 samples=1968 probabilities={0: 0.47815, 1: 0.52185}
+                v(g) > 0.365460 (InformationGain=0.002778, GainRatio=0.011970, SplitInfo=0.232089)
+                    iv(g) <= 0.878788 (InformationGain=0.082399, GainRatio=0.326534, SplitInfo=0.252345)
+                        locCodeAndComment <= 0.625540 (InformationGain=0.060076, GainRatio=0.103883, SplitInfo=0.578304)
+                            locCodeAndComment <= 0.118384 (InformationGain=0.050757, GainRatio=0.093574, SplitInfo=0.542426)
+                                LEAF class=1 samples=58 probabilities={0: 0.275862, 1: 0.724138}
+                            locCodeAndComment > 0.118384 (InformationGain=0.050757, GainRatio=0.093574, SplitInfo=0.542426)
+                                LEAF class=0 samples=9 probabilities={0: 0.666667, 1: 0.333333}
+                        locCodeAndComment > 0.625540 (InformationGain=0.060076, GainRatio=0.103883, SplitInfo=0.578304)
+                            LEAF class=1 samples=10 probabilities={0: 0.0, 1: 1.0}
+                    iv(g) > 0.878788 (InformationGain=0.082399, GainRatio=0.326534, SplitInfo=0.252345)
+                        LEAF class=0 samples=4 probabilities={0: 1.0, 1: 0.0}
+            i > 0.610270 (InformationGain=0.003643, GainRatio=0.024013, SplitInfo=0.151706)
+                loc <= 0.141468 (InformationGain=0.124110, GainRatio=0.218469, SplitInfo=0.568092)
+                    LEAF class=0 samples=7 probabilities={0: 0.714286, 1: 0.285714}
+                loc > 0.141468 (InformationGain=0.124110, GainRatio=0.218469, SplitInfo=0.568092)
+                    lOCode <= 0.192606 (InformationGain=0.142795, GainRatio=0.142893, SplitInfo=0.999309)
+                        LEAF class=1 samples=20 probabilities={0: 0.0, 1: 1.0}
+                    lOCode > 0.192606 (InformationGain=0.142795, GainRatio=0.142893, SplitInfo=0.999309)
+                        lOCode <= 0.206198 (InformationGain=0.150159, GainRatio=0.220203, SplitInfo=0.681911)
+                            LEAF class=0 samples=4 probabilities={0: 0.75, 1: 0.25}
+                        lOCode > 0.206198 (InformationGain=0.150159, GainRatio=0.220203, SplitInfo=0.681911)
+                            LEAF class=1 samples=16 probabilities={0: 0.1875, 1: 0.8125}
+    loc > 0.250296 (InformationGain=0.029694, GainRatio=0.029993, SplitInfo=0.990014)
+        ev(g) <= 0.000522 (InformationGain=0.015752, GainRatio=0.019617, SplitInfo=0.802968)
+            i <= 0.201962 (InformationGain=0.029231, GainRatio=0.049762, SplitInfo=0.587421)
+                iv(g) <= 0.196970 (InformationGain=0.196797, GainRatio=0.264556, SplitInfo=0.743876)
+                    lOCode <= 0.285621 (InformationGain=0.153401, GainRatio=0.282226, SplitInfo=0.543539)
+                        loc <= 0.255664 (InformationGain=0.057037, GainRatio=0.146306, SplitInfo=0.389850)
+                            LEAF class=1 samples=3 probabilities={0: 0.0, 1: 1.0}
+                        loc > 0.255664 (InformationGain=0.057037, GainRatio=0.146306, SplitInfo=0.389850)
+                            lOBlank <= 0.545455 (InformationGain=0.094187, GainRatio=0.125277, SplitInfo=0.751826)
+                                LEAF class=0 samples=32 probabilities={0: 0.5625, 1: 0.4375}
+                            lOBlank > 0.545455 (InformationGain=0.094187, GainRatio=0.125277, SplitInfo=0.751826)
+                                LEAF class=1 samples=8 probabilities={0: 0.125, 1: 0.875}
+                    lOCode > 0.285621 (InformationGain=0.153401, GainRatio=0.282226, SplitInfo=0.543539)
+                        LEAF class=0 samples=7 probabilities={0: 1.0, 1: 0.0}
+                iv(g) > 0.196970 (InformationGain=0.196797, GainRatio=0.264556, SplitInfo=0.743876)
+                    LEAF class=0 samples=15 probabilities={0: 1.0, 1: 0.0}
+            i > 0.201962 (InformationGain=0.029231, GainRatio=0.049762, SplitInfo=0.587421)
+                v(g) <= 0.001333 (InformationGain=0.023228, GainRatio=0.058704, SplitInfo=0.395688)
+                    loc <= 0.280986 (InformationGain=0.219917, GainRatio=0.363368, SplitInfo=0.605217)
+                        LEAF class=1 samples=4 probabilities={0: 0.0, 1: 1.0}
+                    loc > 0.280986 (InformationGain=0.219917, GainRatio=0.363368, SplitInfo=0.605217)
+                        loc <= 0.447375 (InformationGain=0.219347, GainRatio=0.242030, SplitInfo=0.906280)
+                            LEAF class=0 samples=19 probabilities={0: 0.894737, 1: 0.105263}
+                        loc > 0.447375 (InformationGain=0.219347, GainRatio=0.242030, SplitInfo=0.906280)
+                            LEAF class=1 samples=8 probabilities={0: 0.375, 1: 0.625}
+                v(g) > 0.001333 (InformationGain=0.023228, GainRatio=0.058704, SplitInfo=0.395688)
+                    lOBlank <= 0.098028 (InformationGain=0.009625, GainRatio=0.049321, SplitInfo=0.195141)
+                        LEAF class=0 samples=11 probabilities={0: 0.636364, 1: 0.363636}
+                    lOBlank > 0.098028 (InformationGain=0.009625, GainRatio=0.049321, SplitInfo=0.195141)
+                        i <= 0.554032 (InformationGain=0.019290, GainRatio=0.019419, SplitInfo=0.993363)
+                            v(g) <= 0.067308 (InformationGain=0.071630, GainRatio=0.282161, SplitInfo=0.253861)
+                                LEAF class=0 samples=9 probabilities={0: 1.0, 1: 0.0}
+                            v(g) > 0.067308 (InformationGain=0.071630, GainRatio=0.282161, SplitInfo=0.253861)
+                                iv(g) <= 0.575155 (InformationGain=0.041896, GainRatio=0.117018, SplitInfo=0.358027)
+                                    LEAF class=1 samples=161 probabilities={0: 0.310559, 1: 0.689441}
+                                iv(g) > 0.575155 (InformationGain=0.041896, GainRatio=0.117018, SplitInfo=0.358027)
+                                    LEAF class=0 samples=13 probabilities={0: 0.769231, 1: 0.230769}
+                        i > 0.554032 (InformationGain=0.019290, GainRatio=0.019419, SplitInfo=0.993363)
+                            i <= 0.826640 (InformationGain=0.073439, GainRatio=0.073947, SplitInfo=0.993141)
+                                LEAF class=1 samples=78 probabilities={0: 0.089744, 1: 0.910256}
+                            i > 0.826640 (InformationGain=0.073439, GainRatio=0.073947, SplitInfo=0.993141)
+                                locCodeAndComment <= 0.019375 (InformationGain=0.147824, GainRatio=0.148067, SplitInfo=0.998362)
+                                    LEAF class=0 samples=34 probabilities={0: 0.588235, 1: 0.411765}
+                                locCodeAndComment > 0.019375 (InformationGain=0.147824, GainRatio=0.148067, SplitInfo=0.998362)
+                                    LEAF class=1 samples=34 probabilities={0: 0.147059, 1: 0.852941}
+        ev(g) > 0.000522 (InformationGain=0.015752, GainRatio=0.019617, SplitInfo=0.802968)
+            ev(g) <= 0.061987 (InformationGain=0.021447, GainRatio=0.059515, SplitInfo=0.360365)
+                LEAF class=1 samples=85 probabilities={0: 0.0, 1: 1.0}
+            ev(g) > 0.061987 (InformationGain=0.021447, GainRatio=0.059515, SplitInfo=0.360365)
+                iv(g) <= 0.151551 (InformationGain=0.018024, GainRatio=0.030067, SplitInfo=0.599471)
+                    i <= 0.720964 (InformationGain=0.040446, GainRatio=0.124556, SplitInfo=0.324719)
+                        v(g) <= 0.105769 (InformationGain=0.049654, GainRatio=0.225353, SplitInfo=0.220340)
+                            LEAF class=0 samples=7 probabilities={0: 1.0, 1: 0.0}
+                        v(g) > 0.105769 (InformationGain=0.049654, GainRatio=0.225353, SplitInfo=0.220340)
+                            locCodeAndComment <= 0.526421 (InformationGain=0.019712, GainRatio=0.036173, SplitInfo=0.544949)
+                                locCodeAndComment <= 0.245622 (InformationGain=0.054296, GainRatio=0.127657, SplitInfo=0.425329)
+                                    LEAF class=1 samples=133 probabilities={0: 0.406015, 1: 0.593985}
+                                locCodeAndComment > 0.245622 (InformationGain=0.054296, GainRatio=0.127657, SplitInfo=0.425329)
+                                    LEAF class=0 samples=14 probabilities={0: 0.857143, 1: 0.142857}
+                            locCodeAndComment > 0.526421 (InformationGain=0.019712, GainRatio=0.036173, SplitInfo=0.544949)
+                                locCodeAndComment <= 0.989972 (InformationGain=0.389654, GainRatio=0.462423, SplitInfo=0.842634)
+                                    LEAF class=1 samples=14 probabilities={0: 0.0, 1: 1.0}
+                                locCodeAndComment > 0.989972 (InformationGain=0.389654, GainRatio=0.462423, SplitInfo=0.842634)
+                                    LEAF class=0 samples=6 probabilities={0: 0.666667, 1: 0.333333}
+                    i > 0.720964 (InformationGain=0.040446, GainRatio=0.124556, SplitInfo=0.324719)
+                        LEAF class=1 samples=10 probabilities={0: 0.0, 1: 1.0}
+                iv(g) > 0.151551 (InformationGain=0.018024, GainRatio=0.030067, SplitInfo=0.599471)
+                    iv(g) <= 0.180889 (InformationGain=0.007672, GainRatio=0.042400, SplitInfo=0.180955)
+                        LEAF class=1 samples=27 probabilities={0: 0.0, 1: 1.0}
+                    iv(g) > 0.180889 (InformationGain=0.007672, GainRatio=0.042400, SplitInfo=0.180955)
+                        v(g) <= 0.212472 (InformationGain=0.010308, GainRatio=0.033090, SplitInfo=0.311521)
+                            iv(g) <= 0.287879 (InformationGain=0.063568, GainRatio=0.241681, SplitInfo=0.263026)
+                                lOCode <= 0.376361 (InformationGain=0.120412, GainRatio=0.177642, SplitInfo=0.677836)
+                                    LEAF class=1 samples=45 probabilities={0: 0.311111, 1: 0.688889}
+                                lOCode > 0.376361 (InformationGain=0.120412, GainRatio=0.177642, SplitInfo=0.677836)
+                                    LEAF class=0 samples=11 probabilities={0: 0.818182, 1: 0.181818}
+                            iv(g) > 0.287879 (InformationGain=0.063568, GainRatio=0.241681, SplitInfo=0.263026)
+                                LEAF class=0 samples=3 probabilities={0: 1.0, 1: 0.0}
+                        v(g) > 0.212472 (InformationGain=0.010308, GainRatio=0.033090, SplitInfo=0.311521)
+                            LEAF class=1 samples=944 probabilities={0: 0.200212, 1: 0.799788}

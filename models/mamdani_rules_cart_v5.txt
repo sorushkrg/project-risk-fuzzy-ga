@@ -1,0 +1,39 @@
+IF (lOBlank IS Medium) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.5174
+IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.7630
+IF (i IS High) AND (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.3681
+IF (b IS Low) AND (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.3731
+IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.4063
+IF (b IS High) AND (i IS High) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.2593
+IF (b IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.2918
+IF (b IS Low) AND (lOBlank IS Low) AND (loc IS High) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.1763
+IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Medium) WEIGHT 0.1839
+IF (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.2714
+IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.1417
+IF (b IS Low) AND (ev_g IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.2080
+IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.1438
+IF (b IS High) AND (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.0918
+IF (i IS High) AND (lOBlank IS Medium) AND (loc IS High) AND (locCodeAndComment IS High) THEN (Risk IS High) WEIGHT 0.0959
+IF (ev_g IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Medium) WEIGHT 0.0804
+IF (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Low) WEIGHT 0.0994
+IF (b IS Low) AND (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0552
+IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Medium) WEIGHT 0.0544
+IF (i IS High) AND (lOBlank IS High) AND (loc IS Medium) THEN (Risk IS Medium) WEIGHT 0.0500
+IF (ev_g IS Low) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0691
+IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS Medium) THEN (Risk IS High) WEIGHT 0.0577
+IF (b IS Low) AND (i IS Low) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.0546
+IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.0500
+IF (b IS Medium) AND (lOBlank IS Low) AND (loc IS Medium) THEN (Risk IS Medium) WEIGHT 0.0500
+IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS High) WEIGHT 0.0500
+IF (i IS Medium) AND (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.0500
+IF (lOBlank IS High) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0500
+IF (b IS Low) AND (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Low) WEIGHT 0.0500
+IF (b IS Medium) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Low) WEIGHT 0.0500
+IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.0500
+IF (loc IS Medium) THEN (Risk IS High) WEIGHT 0.0500
+IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0500
+IF (branchCount IS High) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS Low) WEIGHT 0.0500
+IF (branchCount IS Medium) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0500
+IF (b IS High) AND (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Low) WEIGHT 0.0500
+IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Medium) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0500
+IF (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS High) THEN (Risk IS Low) WEIGHT 0.0500
+IF (branchCount IS Medium) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS Low) WEIGHT 0.0500

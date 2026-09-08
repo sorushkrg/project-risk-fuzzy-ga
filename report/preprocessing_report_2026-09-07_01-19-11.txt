@@ -1,0 +1,96 @@
+============================================================
+--- BEFORE PREPROCESSING (RAW DATA) ---
+============================================================
+Total Rows (Instances): 10885
+Total Columns (Features + Target): 22
+
+Class Distribution (Raw):
+defects
+False    8779
+True     2106
+
+============================================================
+--- EXECUTION OF 5 CLEANING STEPS ---
+============================================================
+[STEP 1 & 3] Missing/Invalid values cleaned (Dropped rows with NaN/'?').
+[STEP 2] Duplicate rows removed: 1973
+[STEP 4] Inconsistent rows removed (Negative values check): 0
+[STEP 5] Outlier handling will be applied on training data only.
+
+============================================================
+--- TRAIN-TEST SPLIT (BEFORE SCALING/BALANCING) ---
+============================================================
+Training set size: 7125 (80.0%)
+Testing set size: 1782 (20.0%)
+
+Class distribution in TRAIN (before SMOTE):
+defects
+0    5522
+1    1603
+
+Class distribution in TEST (before SMOTE):
+defects
+0    1381
+1     401
+
+============================================================
+--- OUTLIER HANDLING (ON TRAINING DATA ONLY) ---
+============================================================
+Outliers capped on 21 feature columns (using train percentiles).
+
+============================================================
+--- NORMALIZATION (ON TRAINING DATA) ---
+============================================================
+Scaler fitted on TRAINING data only.
+TRAINING data normalization (min/max):
+  Min: 0.0000, Max: 1.0000
+TEST data normalization (min/max, using train parameters):
+  Min: 0.0000, Max: 1.0000
+
+============================================================
+--- SMOTE BALANCING (ON BOTH TRAIN AND TEST DATA) ---
+============================================================
+✅ SMOTE applied to TRAINING set.
+
+Class distribution in TRAIN (before SMOTE):
+defects
+0    5522
+1    1603
+
+Class distribution in TRAIN (after SMOTE):
+defects
+0    5522
+1    4417
+
+✅ SMOTE applied to TEST set.
+
+Class distribution in TEST (before SMOTE):
+defects
+0    1381
+1     401
+
+Class distribution in TEST (after SMOTE):
+defects
+0    1381
+1    1104
+
+============================================================
+--- SUMMARY OF CHANGES ---
+============================================================
+Raw dataset: 10885 rows
+After cleaning: 8907 rows
+Train set (before SMOTE): 7125 rows
+Train set (after SMOTE): 9939 rows
+Test set (before SMOTE): 1782 rows
+Test set (after SMOTE): 2485 rows
+Total rows saved: 12424 rows
+
+============================================================
+--- FILES SAVED ---
+============================================================
+✅ X_train.csv (balanced with SMOTE)
+✅ y_train.csv (balanced with SMOTE)
+✅ X_test.csv (balanced with SMOTE)
+✅ y_test.csv (balanced with SMOTE)
+
+[INFO] Report successfully saved to: ../report/preprocessing_report_2026-09-07_01-19-11.txt

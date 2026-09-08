@@ -1,0 +1,64 @@
+{
+  "model_info": {
+    "algorithm": "C4.5-style (v5)",
+    "implementation": "From Scratch",
+    "training_date": "2026-09-07_10-04-20",
+    "features": [
+      "loc",
+      "v(g)",
+      "ev(g)",
+      "iv(g)",
+      "i",
+      "lOCode",
+      "lOBlank",
+      "locCodeAndComment"
+    ],
+    "data_path": "/home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/data/processed/X_train_selected_ga.csv"
+  },
+  "v5_fixes": {
+    "A_candidate_thresholds": "all distinct adjacent value midpoints (like CART)",
+    "B_param_grid": "max_depth up to 9, min_samples_leaf down to 3",
+    "C_threshold_search": "specificity floor >= 0.30"
+  },
+  "optimization": {
+    "best_params": {
+      "max_depth": 9,
+      "min_samples_split": 15,
+      "min_samples_leaf": 3,
+      "confidence_factor": 0.25
+    },
+    "best_mean_cv_f1": 0.6295270991979407,
+    "train_cv_gap": 0.02261553014629991,
+    "overfitting_risk": "LOW"
+  },
+  "threshold_optimization": {
+    "method": "specificity-constrained OOF F1 maximization",
+    "min_specificity_floor": 0.3,
+    "chosen_threshold": 0.36,
+    "oof_f1_at_threshold": 0.6843296247407128,
+    "oof_specificity_at_threshold": 0.5363998551249547
+  },
+  "tree_structure": {
+    "depth": 9,
+    "leaf_nodes": 71,
+    "pruning_changes": 40,
+    "rules": 71
+  },
+  "metrics": {
+    "prediction_threshold": 0.36,
+    "accuracy": 0.6732394366197183,
+    "balanced_accuracy": 0.6922021429545908,
+    "precision": 0.5905707196029777,
+    "recall": 0.8623188405797102,
+    "f1_score": 0.7010309278350515,
+    "roc_auc": 0.7675558039228033,
+    "pr_auc": 0.7099089409096518,
+    "mcc": 0.40011050734352227,
+    "specificity": 0.5220854453294714,
+    "sensitivity": 0.8623188405797102,
+    "true_negatives": 721,
+    "false_positives": 660,
+    "false_negatives": 152,
+    "true_positives": 952
+  }
+}

@@ -1,0 +1,3283 @@
+{
+    "phase": 5,
+    "validation_mcc": 0.28058931317990593,
+    "final_test_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.6197183098591549,
+        "balanced_accuracy": 0.6323300039878685,
+        "precision": 0.5534633490248824,
+        "recall": 0.7454710144927537,
+        "f1_score": 0.6352759552296411,
+        "mcc": 0.2682556898325589,
+        "specificity": 0.5191889934829833,
+        "sensitivity": 0.7454710144927537,
+        "roc_auc": 0.6047120470358593,
+        "pr_auc": 0.5084938199573887,
+        "valid_samples": 2485,
+        "invalid_samples": 0,
+        "true_negatives": 717,
+        "false_positives": 664,
+        "false_negatives": 281,
+        "true_positives": 823
+    },
+    "structured_rules": [
+        {
+            "conditions": {
+                "lOBlank": "Medium",
+                "loc": "Medium",
+                "v_g": "Medium"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.48264685108887784,
+            "samples": 1390,
+            "weighted_samples": 1384.65718495521,
+            "depth": 7,
+            "path_sample_count": 1109,
+            "average_membership": 0.6084279899529806,
+            "minimum_membership": 0.46991135506408593,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.7733984728211342,
+                    "sample_count": 703,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.19156986381044683,
+                        "Medium": 0.7733984728211342,
+                        "High": 0.035031663368419036
+                    }
+                },
+                "v_g": {
+                    "lower": 0.0008576666004955769,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5393943046002457,
+                    "sample_count": 703,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.31761073441147347,
+                        "Medium": 0.5393943046002457,
+                        "High": 0.14299496098828085
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.09104897454380989,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5145302160267929,
+                    "sample_count": 703,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.5145302160267929,
+                        "High": 0.48546978397320706
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.36018097401018695,
+                    "samples": 496,
+                    "weighted_samples": 481.0444942603867,
+                    "depth": 7
+                },
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.547842411653852,
+                    "samples": 894,
+                    "weighted_samples": 903.6126906948232,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 2,
+            "rule_text": "IF (lOBlank IS Medium) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.5174",
+            "rule_weight": 0.5173531489111222,
+            "rule_support": 1.0,
+            "rule_certainty": 0.5173531489111222
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Low",
+                "loc": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.13215381433002063,
+            "samples": 1317,
+            "weighted_samples": 1217.4233593544857,
+            "depth": 6,
+            "path_sample_count": 1062,
+            "average_membership": 0.8954233178936349,
+            "minimum_membership": 0.7677612681046938,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.8869371985405462,
+                    "sample_count": 633,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.8869371985405462,
+                        "Medium": 0.11276312877381976,
+                        "High": 0.0002996726856340359
+                    }
+                },
+                "b": {
+                    "lower": 0.006857630796730518,
+                    "upper": 0.05852450616657734,
+                    "selected_term": "Low",
+                    "selected_membership": 0.7677612681046938,
+                    "sample_count": 633,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.7677612681046938,
+                        "Medium": 0.2230152967470145,
+                        "High": 0.009223435148291768
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.022255269810557365,
+                    "upper": 0.022829988971352577,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9433467824522577,
+                    "sample_count": 633,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9433467824522577,
+                        "Medium": 0.056653217547742336,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.1867052847267203,
+                    "samples": 535,
+                    "weighted_samples": 500.15749031781394,
+                    "depth": 6
+                },
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.09411446559674798,
+                    "samples": 782,
+                    "weighted_samples": 717.2658690366717,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 2,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.7630",
+            "rule_weight": 0.7630309005297216,
+            "rule_support": 0.8792236609770426,
+            "rule_certainty": 0.8678461856699794
+        },
+        {
+            "conditions": {
+                "i": "High",
+                "lOBlank": "High",
+                "loc": "High"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.6582694396725953,
+            "samples": 747,
+            "weighted_samples": 774.2474868878235,
+            "depth": 7,
+            "path_sample_count": 595,
+            "average_membership": 0.7892153438511225,
+            "minimum_membership": 0.6657321998716614,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "High",
+                    "selected_membership": 0.6657321998716614,
+                    "sample_count": 595,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.3342678001283388,
+                        "High": 0.6657321998716614
+                    }
+                },
+                "i": {
+                    "lower": 0.13496214896440506,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.7047257534016601,
+                    "sample_count": 595,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0010100781933041383,
+                        "Medium": 0.2942641684050358,
+                        "High": 0.7047257534016601
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.18186065554618835,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.997188078280046,
+                    "sample_count": 595,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0028119217199540397,
+                        "High": 0.997188078280046
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.6582694396725953,
+                    "samples": 747,
+                    "weighted_samples": 774.2474868878235,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (i IS High) AND (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.3681",
+            "rule_weight": 0.3680791642142448,
+            "rule_support": 0.5591618599176,
+            "rule_certainty": 0.6582694396725953
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "i": "Medium",
+                "lOBlank": "Medium",
+                "loc": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.2759653289194888,
+            "samples": 749,
+            "weighted_samples": 713.458673015766,
+            "depth": 6,
+            "path_sample_count": 590,
+            "average_membership": 0.5867807164628014,
+            "minimum_membership": 0.49622392163759493,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.7179055649118745,
+                    "sample_count": 590,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.7179055649118745,
+                        "Medium": 0.27697839611253355,
+                        "High": 0.005116038975591911
+                    }
+                },
+                "i": {
+                    "lower": 0.0688408613204956,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.49622392163759493,
+                    "sample_count": 590,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.3616339625350456,
+                        "Medium": 0.49622392163759493,
+                        "High": 0.14214211582735942
+                    }
+                },
+                "b": {
+                    "lower": 0.006857630796730518,
+                    "upper": null,
+                    "selected_term": "Low",
+                    "selected_membership": 0.6042300155228035,
+                    "sample_count": 590,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.6042300155228035,
+                        "Medium": 0.33919670453793743,
+                        "High": 0.056573279939259105
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.04521171934902668,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5287633637789328,
+                    "sample_count": 590,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.4712366362210672,
+                        "Medium": 0.5287633637789328,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.2759653289194888,
+                    "samples": 749,
+                    "weighted_samples": 713.458673015766,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.3731",
+            "rule_weight": 0.37306621542083557,
+            "rule_support": 0.5152601530311955,
+            "rule_certainty": 0.7240346710805112
+        },
+        {
+            "conditions": {
+                "b": "High",
+                "ev_g": "High",
+                "i": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 0.8202300030688081,
+            "samples": 637,
+            "weighted_samples": 685.8350066709976,
+            "depth": 7,
+            "path_sample_count": 516,
+            "average_membership": 0.9909832040675594,
+            "minimum_membership": 0.9549160203377968,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 516,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.21172580122947693,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 516,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": 0.061987048014998436,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.9549160203377968,
+                    "sample_count": 516,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.04508397966220328,
+                        "High": 0.9549160203377968
+                    }
+                },
+                "i": {
+                    "lower": 0.2728484719991684,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 516,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "b": {
+                    "lower": 0.15277396887540817,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 516,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.8202300030688081,
+                    "samples": 637,
+                    "weighted_samples": 685.8350066709976,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.4063",
+            "rule_weight": 0.40626839317245533,
+            "rule_support": 0.4953103296056508,
+            "rule_certainty": 0.8202300030688081
+        },
+        {
+            "conditions": {
+                "b": "High",
+                "i": "High",
+                "lOBlank": "Medium",
+                "loc": "Medium",
+                "locCodeAndComment": "Low"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.45270855051765685,
+            "samples": 663,
+            "weighted_samples": 656.1007364741172,
+            "depth": 7,
+            "path_sample_count": 513,
+            "average_membership": 0.6498913805832582,
+            "minimum_membership": 0.5702182327886478,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5702182327886478,
+                    "sample_count": 513,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.5702182327886478,
+                        "High": 0.4297817672113522
+                    }
+                },
+                "i": {
+                    "lower": 0.12205105274915695,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.5722192452309478,
+                    "sample_count": 513,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.018451492029337508,
+                        "Medium": 0.4093292627397147,
+                        "High": 0.5722192452309478
+                    }
+                },
+                "b": {
+                    "lower": 0.029181543737649918,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.6420549714475615,
+                    "sample_count": 513,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.00021789956596763175,
+                        "Medium": 0.35772712898647097,
+                        "High": 0.6420549714475615
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.15910391509532928,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5852861879256628,
+                    "sample_count": 513,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0893346312896727,
+                        "Medium": 0.5852861879256628,
+                        "High": 0.3253791807846646
+                    }
+                },
+                "locCodeAndComment": {
+                    "lower": null,
+                    "upper": 0.1279362514615059,
+                    "selected_term": "Low",
+                    "selected_membership": 0.8796782655234721,
+                    "sample_count": 513,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.8796782655234721,
+                        "Medium": 0.004776842642135851,
+                        "High": 0.11554489183439212
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.4527085505176569,
+                    "samples": 663,
+                    "weighted_samples": 656.1007364741172,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS High) AND (i IS High) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.2593",
+            "rule_weight": 0.2593265155974095,
+            "rule_support": 0.47383622719246593,
+            "rule_certainty": 0.5472914494823431
+        },
+        {
+            "conditions": {
+                "b": "Medium",
+                "lOBlank": "Medium",
+                "loc": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.21779317378925028,
+            "samples": 549,
+            "weighted_samples": 516.5840965895392,
+            "depth": 5,
+            "path_sample_count": 446,
+            "average_membership": 0.6951579246581924,
+            "minimum_membership": 0.5172273068238389,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.5172273068238389,
+                    "sample_count": 446,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.5172273068238389,
+                        "Medium": 0.4756902103013176,
+                        "High": 0.007082482874843573
+                    }
+                },
+                "b": {
+                    "lower": 0.02035187091678381,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5685682273226604,
+                    "sample_count": 446,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.3524609746324855,
+                        "Medium": 0.5685682273226604,
+                        "High": 0.07897079804485407
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.06801361590623856,
+                    "upper": 0.06821781769394875,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.999678239828078,
+                    "sample_count": 446,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.999678239828078,
+                        "High": 0.0003217601719219388
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.21779317378925028,
+                    "samples": 549,
+                    "weighted_samples": 516.5840965895392,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.2918",
+            "rule_weight": 0.2918235726898147,
+            "rule_support": 0.37307725132430475,
+            "rule_certainty": 0.7822068262107498
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Low",
+                "loc": "High",
+                "locCodeAndComment": "Low"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.6232369496042472,
+            "samples": 381,
+            "weighted_samples": 391.7345133225932,
+            "depth": 6,
+            "path_sample_count": 308,
+            "average_membership": 0.8934744595816213,
+            "minimum_membership": 0.5828150403225116,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "High",
+                    "selected_membership": 0.5828150403225116,
+                    "sample_count": 308,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.4171849596774883,
+                        "High": 0.5828150403225116
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.029181543737649918,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9975763044974801,
+                    "sample_count": 308,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9975763044974801,
+                        "Medium": 0.0024236955025199675,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.15910391509532928,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9935064935064936,
+                    "sample_count": 308,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9935064935064936,
+                        "Medium": 0.004232933194873047,
+                        "High": 0.0022605732986334466
+                    }
+                },
+                "locCodeAndComment": {
+                    "lower": null,
+                    "upper": 0.1279362514615059,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 308,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.6232369496042472,
+                    "samples": 381,
+                    "weighted_samples": 391.7345133225932,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS High) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.1763",
+            "rule_weight": 0.1763204826368447,
+            "rule_support": 0.28291082989994004,
+            "rule_certainty": 0.6232369496042472
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "i": "Low",
+                "lOBlank": "Low",
+                "loc": "Low"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.3407410532755634,
+            "samples": 400,
+            "weighted_samples": 386.319558348408,
+            "depth": 6,
+            "path_sample_count": 324,
+            "average_membership": 0.9857896045272703,
+            "minimum_membership": 0.9591839742475607,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.03602169267833233,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9988710012846083,
+                    "sample_count": 324,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9988710012846083,
+                        "Medium": 0.001128998715391705,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.08744272962212563,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9851034425769125,
+                    "sample_count": 324,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9851034425769125,
+                        "Medium": 0.014896557423087478,
+                        "High": 0.0
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.003442299785092473,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 324,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9591839742475607,
+                    "sample_count": 324,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9591839742475607,
+                        "Medium": 0.04081602575243935,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.34074105327556337,
+                    "samples": 400,
+                    "weighted_samples": 386.319558348408,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Medium) WEIGHT 0.1839",
+            "rule_weight": 0.1839333431430245,
+            "rule_support": 0.2790001471453777,
+            "rule_certainty": 0.6592589467244365
+        },
+        {
+            "conditions": {
+                "lOBlank": "Medium",
+                "loc": "Low"
+            },
+            "output_term": "High",
+            "defect_probability": 1.0,
+            "samples": 334,
+            "weighted_samples": 375.77835635046466,
+            "depth": 5,
+            "path_sample_count": 276,
+            "average_membership": 0.7393822712075421,
+            "minimum_membership": 0.5625978462947133,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.5625978462947133,
+                    "sample_count": 138,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.5625978462947133,
+                        "Medium": 0.4300371616822586,
+                        "High": 0.007364992023028062
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.06821781769394875,
+                    "upper": 0.09084270521998405,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.9179394134094755,
+                    "sample_count": 138,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.9179394134094755,
+                        "High": 0.08206058659052458
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 162,
+                    "weighted_samples": 182.26375367896784,
+                    "depth": 3
+                },
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 172,
+                    "weighted_samples": 193.51460267149682,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 2,
+            "rule_text": "IF (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.2714",
+            "rule_weight": 0.2713872866391981,
+            "rule_support": 0.2713872866391981,
+            "rule_certainty": 1.0
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Low",
+                "loc": "Medium",
+                "v_g": "Medium"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.40764149399647764,
+            "samples": 338,
+            "weighted_samples": 331.1983443753965,
+            "depth": 7,
+            "path_sample_count": 276,
+            "average_membership": 0.8145223959314372,
+            "minimum_membership": 0.5603862243996569,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.03602169267833233,
+                    "upper": 0.09129055216908455,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6113020194875236,
+                    "sample_count": 224,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.383702864168939,
+                        "Medium": 0.6113020194875236,
+                        "High": 0.004995116343537367
+                    }
+                },
+                "v_g": {
+                    "lower": 0.03654571250081062,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5946307473369845,
+                    "sample_count": 224,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.09397878963157294,
+                        "Medium": 0.5946307473369845,
+                        "High": 0.31139046303144263
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.003442299785092473,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 224,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 224,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.35564380836208176,
+                    "samples": 271,
+                    "weighted_samples": 262.57183294729913,
+                    "depth": 7
+                },
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.6065897917013036,
+                    "samples": 67,
+                    "weighted_samples": 68.62651142809739,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 2,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.1417",
+            "rule_weight": 0.14168716892289565,
+            "rule_support": 0.23919158328428414,
+            "rule_certainty": 0.5923585060035224
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "ev_g": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 0.9039665944072492,
+            "samples": 290,
+            "weighted_samples": 318.61988705191305,
+            "depth": 6,
+            "path_sample_count": 240,
+            "average_membership": 0.9585414343318096,
+            "minimum_membership": 0.8458333333333333,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 240,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.21172580122947693,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 240,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": 0.061987048014998436,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.9883324039939052,
+                    "sample_count": 240,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.011667596006094811,
+                        "High": 0.9883324039939052
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.15277396887540817,
+                    "selected_term": "Low",
+                    "selected_membership": 0.8458333333333333,
+                    "sample_count": 240,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.8458333333333333,
+                        "Medium": 0.01051999411858997,
+                        "High": 0.1436466725480767
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.9039665944072492,
+                    "samples": 290,
+                    "weighted_samples": 318.61988705191305,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (ev_g IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.2080",
+            "rule_weight": 0.20800941730429617,
+            "rule_support": 0.230107416127133,
+            "rule_certainty": 0.9039665944072492
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Low",
+                "loc": "Low"
+            },
+            "output_term": "High",
+            "defect_probability": 1.0,
+            "samples": 177,
+            "weighted_samples": 199.1400271677606,
+            "depth": 6,
+            "path_sample_count": 143,
+            "average_membership": 0.8313474722277472,
+            "minimum_membership": 0.6850401757416184,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.7947768829872978,
+                    "sample_count": 82,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.7947768829872978,
+                        "Medium": 0.19948641472247777,
+                        "High": 0.005736702290224394
+                    }
+                },
+                "b": {
+                    "lower": 0.006857630796730518,
+                    "upper": null,
+                    "selected_term": "Low",
+                    "selected_membership": 0.6850401757416184,
+                    "sample_count": 82,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.6850401757416184,
+                        "Medium": 0.2289910479055349,
+                        "High": 0.08596877635284689
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.022829988971352577,
+                    "upper": 0.04521171934902668,
+                    "selected_term": "Low",
+                    "selected_membership": 0.7278508660880174,
+                    "sample_count": 82,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.7278508660880174,
+                        "Medium": 0.27214913391198264,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 28,
+                    "weighted_samples": 31.502377179080824,
+                    "depth": 4
+                },
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 47,
+                    "weighted_samples": 52.8789902648856,
+                    "depth": 6
+                },
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 102,
+                    "weighted_samples": 114.75865972379417,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 3,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.1438",
+            "rule_weight": 0.14381901118304763,
+            "rule_support": 0.14381901118304763,
+            "rule_certainty": 1.0
+        },
+        {
+            "conditions": {
+                "b": "High",
+                "ev_g": "Low",
+                "i": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 0.7089364351513109,
+            "samples": 171,
+            "weighted_samples": 179.33144258334178,
+            "depth": 7,
+            "path_sample_count": 134,
+            "average_membership": 0.9300498879789594,
+            "minimum_membership": 0.7488297885939718,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 134,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.0013332371599972248,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.7488297885939718,
+                    "sample_count": 134,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.02214024141801531,
+                        "Medium": 0.22902996998801273,
+                        "High": 0.7488297885939718
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 134,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": 0.20196248590946198,
+                    "upper": 0.5540318787097931,
+                    "selected_term": "High",
+                    "selected_membership": 0.9344182259544868,
+                    "sample_count": 134,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.06558177404551327,
+                        "High": 0.9344182259544868
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.4102581739425659,
+                    "selected_term": "High",
+                    "selected_membership": 0.9670014253463388,
+                    "sample_count": 134,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.03299857465366115,
+                        "High": 0.9670014253463388
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.7089364351513109,
+                    "samples": 171,
+                    "weighted_samples": 179.33144258334178,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS High) AND (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.0918",
+            "rule_weight": 0.09181665685697415,
+            "rule_support": 0.12951324308416648,
+            "rule_certainty": 0.7089364351513109
+        },
+        {
+            "conditions": {
+                "i": "High",
+                "lOBlank": "Medium",
+                "loc": "High",
+                "locCodeAndComment": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 0.7622985149360415,
+            "samples": 164,
+            "weighted_samples": 174.15751901730985,
+            "depth": 6,
+            "path_sample_count": 139,
+            "average_membership": 0.6935278093129448,
+            "minimum_membership": 0.5246158810723275,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "High",
+                    "selected_membership": 0.5246158810723275,
+                    "sample_count": 139,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.47538411892767257,
+                        "High": 0.5246158810723275
+                    }
+                },
+                "i": {
+                    "lower": 0.13954970240592957,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.6304003638272593,
+                    "sample_count": 139,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0006170343482176194,
+                        "Medium": 0.36898260182452314,
+                        "High": 0.6304003638272593
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.15910391509532928,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6190949923521923,
+                    "sample_count": 139,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.04937250845739264,
+                        "Medium": 0.6190949923521923,
+                        "High": 0.331532499190415
+                    }
+                },
+                "locCodeAndComment": {
+                    "lower": 0.1279362514615059,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 139,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.7622985149360415,
+                    "samples": 164,
+                    "weighted_samples": 174.15751901730985,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (i IS High) AND (lOBlank IS Medium) AND (loc IS High) AND (locCodeAndComment IS High) THEN (Risk IS High) WEIGHT 0.0959",
+            "rule_weight": 0.09587934078869866,
+            "rule_support": 0.12577663331371325,
+            "rule_certainty": 0.7622985149360415
+        },
+        {
+            "conditions": {
+                "ev_g": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.6556598059686989,
+            "samples": 164,
+            "weighted_samples": 169.87987369680744,
+            "depth": 5,
+            "path_sample_count": 132,
+            "average_membership": 0.8543052349655422,
+            "minimum_membership": 0.7812204681039926,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 132,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": null,
+                    "upper": 0.21172580122947693,
+                    "selected_term": "High",
+                    "selected_membership": 0.7816952367926341,
+                    "sample_count": 132,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.003662092234901711,
+                        "Medium": 0.21464267097246426,
+                        "High": 0.7816952367926341
+                    }
+                },
+                "ev_g": {
+                    "lower": 0.061987048014998436,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.7812204681039926,
+                    "sample_count": 132,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.21877953189600746,
+                        "High": 0.7812204681039926
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.6556598059686989,
+                    "samples": 164,
+                    "weighted_samples": 169.87987369680744,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (ev_g IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Medium) WEIGHT 0.0804",
+            "rule_weight": 0.08044114184814546,
+            "rule_support": 0.12268731606827477,
+            "rule_certainty": 0.6556598059686989
+        },
+        {
+            "conditions": {
+                "lOBlank": "Medium",
+                "loc": "Low",
+                "v_g": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.18074300365501067,
+            "samples": 180,
+            "weighted_samples": 168.0689800741057,
+            "depth": 6,
+            "path_sample_count": 146,
+            "average_membership": 0.7258402901035464,
+            "minimum_membership": 0.5656166015238634,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.5656166015238634,
+                    "sample_count": 146,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.5656166015238634,
+                        "Medium": 0.4283061534397119,
+                        "High": 0.006077245036424745
+                    }
+                },
+                "v_g": {
+                    "lower": null,
+                    "upper": 0.0008576666004955769,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 146,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.09084270521998405,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6119042687867761,
+                    "sample_count": 146,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.6119042687867761,
+                        "High": 0.38809573121322394
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.18074300365501067,
+                    "samples": 180,
+                    "weighted_samples": 168.0689800741057,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Low) WEIGHT 0.0994",
+            "rule_weight": 0.09944099470276585,
+            "rule_support": 0.12137948793407828,
+            "rule_certainty": 0.8192569963449894
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Medium",
+                "loc": "Low",
+                "v_g": "Low"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.40872847763469333,
+            "samples": 132,
+            "weighted_samples": 129.37437237281736,
+            "depth": 6,
+            "path_sample_count": 103,
+            "average_membership": 0.8997678021861288,
+            "minimum_membership": 0.689239895227218,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9102040466456871,
+                    "sample_count": 103,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9102040466456871,
+                        "Medium": 0.08979595335431284,
+                        "High": 0.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.0003500251332297921,
+                    "upper": null,
+                    "selected_term": "Low",
+                    "selected_membership": 0.689239895227218,
+                    "sample_count": 103,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.689239895227218,
+                        "Medium": 0.29721967368368635,
+                        "High": 0.013540431089095722
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.02035187091678381,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9999490270435326,
+                    "sample_count": 103,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9999490270435326,
+                        "Medium": 5.097295646728064e-05,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.06801361590623856,
+                    "upper": 0.06821781769394875,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.9996782398280777,
+                    "sample_count": 103,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.9996782398280777,
+                        "High": 0.0003217601719219388
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.40872847763469333,
+                    "samples": 132,
+                    "weighted_samples": 129.37437237281736,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0552",
+            "rule_weight": 0.055244997057091946,
+            "rule_support": 0.09343422601530232,
+            "rule_certainty": 0.5912715223653067
+        },
+        {
+            "conditions": {
+                "b": "High",
+                "ev_g": "High",
+                "i": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.5993170545222455,
+            "samples": 123,
+            "weighted_samples": 125.77764587399241,
+            "depth": 7,
+            "path_sample_count": 90,
+            "average_membership": 0.9028746873190897,
+            "minimum_membership": 0.5526454274595972,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 90,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.21172580122947693,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 90,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": 0.061987048014998436,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.9617280091358522,
+                    "sample_count": 90,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.03827199086414784,
+                        "High": 0.9617280091358522
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.2728484719991684,
+                    "selected_term": "High",
+                    "selected_membership": 0.5526454274595972,
+                    "sample_count": 90,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.032134744551649136,
+                        "Medium": 0.41521982798875373,
+                        "High": 0.5526454274595972
+                    }
+                },
+                "b": {
+                    "lower": 0.15277396887540817,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 90,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.5993170545222455,
+                    "samples": 123,
+                    "weighted_samples": 125.77764587399241,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Medium) WEIGHT 0.0544",
+            "rule_weight": 0.054439964685108366,
+            "rule_support": 0.09083666862860426,
+            "rule_certainty": 0.5993170545222455
+        },
+        {
+            "conditions": {
+                "i": "High",
+                "lOBlank": "High",
+                "loc": "Medium"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.491983859184179,
+            "samples": 126,
+            "weighted_samples": 125.77581216082812,
+            "depth": 7,
+            "path_sample_count": 91,
+            "average_membership": 0.6372370730832203,
+            "minimum_membership": 0.5155876048422737,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5262855346913936,
+                    "sample_count": 91,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.5262855346913936,
+                        "High": 0.4737144653086065
+                    }
+                },
+                "i": {
+                    "lower": 0.13496214896440506,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.5155876048422737,
+                    "sample_count": 91,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0029939062952379883,
+                        "Medium": 0.4814184888624883,
+                        "High": 0.5155876048422737
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.1816793754696846,
+                    "upper": 0.18186065554618835,
+                    "selected_term": "High",
+                    "selected_membership": 0.8698380797159935,
+                    "sample_count": 91,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.13016192028400644,
+                        "High": 0.8698380797159935
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.491983859184179,
+                    "samples": 126,
+                    "weighted_samples": 125.77581216082812,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (i IS High) AND (lOBlank IS High) AND (loc IS Medium) THEN (Risk IS Medium) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.09083534432018756,
+            "rule_certainty": 0.508016140815821
+        },
+        {
+            "conditions": {
+                "ev_g": "Low",
+                "loc": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 1.0,
+            "samples": 85,
+            "weighted_samples": 95.63221643649516,
+            "depth": 4,
+            "path_sample_count": 73,
+            "average_membership": 0.7962192503571105,
+            "minimum_membership": 0.592438500714221,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 73,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": 0.0005220413440838456,
+                    "upper": 0.061987048014998436,
+                    "selected_term": "Low",
+                    "selected_membership": 0.592438500714221,
+                    "sample_count": 73,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.592438500714221,
+                        "Medium": 0.37207516492102466,
+                        "High": 0.03548633436475452
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 85,
+                    "weighted_samples": 95.63221643649516,
+                    "depth": 4
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (ev_g IS Low) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0691",
+            "rule_weight": 0.06906562683931664,
+            "rule_support": 0.06906562683931664,
+            "rule_certainty": 1.0
+        },
+        {
+            "conditions": {
+                "ev_g": "Low",
+                "i": "High",
+                "loc": "High",
+                "v_g": "Medium"
+            },
+            "output_term": "High",
+            "defect_probability": 0.9173229636076908,
+            "samples": 79,
+            "weighted_samples": 87.08059322181896,
+            "depth": 7,
+            "path_sample_count": 62,
+            "average_membership": 0.8651306655483058,
+            "minimum_membership": 0.4605226621932232,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 62,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.0013332371599972248,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.4605226621932232,
+                    "sample_count": 62,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.26015691055460055,
+                        "Medium": 0.4605226621932232,
+                        "High": 0.2793204272521764
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 62,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": 0.5540318787097931,
+                    "upper": 0.826639711856842,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 62,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.9173229636076909,
+                    "samples": 79,
+                    "weighted_samples": 87.08059322181896,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS Medium) THEN (Risk IS High) WEIGHT 0.0577",
+            "rule_weight": 0.05769011183048799,
+            "rule_support": 0.06288964096527314,
+            "rule_certainty": 0.9173229636076908
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "i": "Low",
+                "lOBlank": "Medium",
+                "loc": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.056186977889477956,
+            "samples": 88,
+            "weighted_samples": 80.09577603308536,
+            "depth": 6,
+            "path_sample_count": 67,
+            "average_membership": 0.8415891013002438,
+            "minimum_membership": 0.528763363778933,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9185942425026036,
+                    "sample_count": 67,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9185942425026036,
+                        "Medium": 0.08140575749739645,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.0688408613204956,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 67,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "b": {
+                    "lower": 0.006857630796730518,
+                    "upper": null,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9189987989194387,
+                    "sample_count": 67,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9189987989194387,
+                        "Medium": 0.06607582794623297,
+                        "High": 0.014925373134328358
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.04521171934902668,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.528763363778933,
+                    "sample_count": 67,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.47123663622106726,
+                        "Medium": 0.528763363778933,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.056186977889477956,
+                    "samples": 88,
+                    "weighted_samples": 80.09577603308536,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (i IS Low) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.0546",
+            "rule_weight": 0.05459505591524384,
+            "rule_support": 0.05784520306062345,
+            "rule_certainty": 0.9438130221105221
+        },
+        {
+            "conditions": {
+                "ev_g": "Low",
+                "i": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 0.6790419496380757,
+            "samples": 70,
+            "weighted_samples": 72.90232303543549,
+            "depth": 7,
+            "path_sample_count": 54,
+            "average_membership": 0.8701878732465181,
+            "minimum_membership": 0.48075149298607256,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 54,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.0013332371599972248,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.48075149298607256,
+                    "sample_count": 54,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.2087630589037311,
+                        "Medium": 0.3104854481101964,
+                        "High": 0.48075149298607256
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 54,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": 0.826639711856842,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 54,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.6790419496380757,
+                    "samples": 70,
+                    "weighted_samples": 72.90232303543549,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.052650088287227344,
+            "rule_certainty": 0.6790419496380757
+        },
+        {
+            "conditions": {
+                "b": "Medium",
+                "lOBlank": "Low",
+                "loc": "Medium"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.3943542074923014,
+            "samples": 73,
+            "weighted_samples": 71.32451473050716,
+            "depth": 6,
+            "path_sample_count": 58,
+            "average_membership": 0.7418456433138517,
+            "minimum_membership": 0.5766998108257072,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.7054903366635902,
+                    "sample_count": 58,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.26901491240676373,
+                        "Medium": 0.7054903366635902,
+                        "High": 0.02549475092964597
+                    }
+                },
+                "b": {
+                    "lower": 0.05852450616657734,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5766998108257072,
+                    "sample_count": 58,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.5766998108257072,
+                        "High": 0.42330018917429274
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.022255269810557365,
+                    "upper": 0.022829988971352577,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9433467824522578,
+                    "sample_count": 58,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9433467824522578,
+                        "Medium": 0.05665321754774234,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.3943542074923014,
+                    "samples": 73,
+                    "weighted_samples": 71.32451473050716,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Medium) AND (lOBlank IS Low) AND (loc IS Medium) THEN (Risk IS Medium) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.05151059446733332,
+            "rule_certainty": 0.6056457925076986
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Low",
+                "loc": "Low",
+                "v_g": "Low"
+            },
+            "output_term": "High",
+            "defect_probability": 0.7931257357142633,
+            "samples": 61,
+            "weighted_samples": 65.25309044350303,
+            "depth": 7,
+            "path_sample_count": 48,
+            "average_membership": 0.9219478976905988,
+            "minimum_membership": 0.7023125777960871,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.03602169267833233,
+                    "upper": 0.06402263045310974,
+                    "selected_term": "Low",
+                    "selected_membership": 0.7023125777960871,
+                    "sample_count": 48,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.7023125777960871,
+                        "Medium": 0.29768742220391275,
+                        "High": 0.0
+                    }
+                },
+                "v_g": {
+                    "lower": null,
+                    "upper": 0.03654571250081062,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9964949163783693,
+                    "sample_count": 48,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9964949163783693,
+                        "Medium": 0.0035050836216306814,
+                        "High": 0.0
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.003442299785092473,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 48,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9889840965879388,
+                    "sample_count": 48,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9889840965879388,
+                        "Medium": 0.011015903412061101,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.7931257357142633,
+                    "samples": 61,
+                    "weighted_samples": 65.25309044350303,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS High) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.0471258092995876,
+            "rule_certainty": 0.7931257357142633
+        },
+        {
+            "conditions": {
+                "lOBlank": "High",
+                "loc": "High"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.3310405320981656,
+            "samples": 67,
+            "weighted_samples": 64.57400533498986,
+            "depth": 6,
+            "path_sample_count": 56,
+            "average_membership": 0.7478968741793582,
+            "minimum_membership": 0.5353071884449329,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "High",
+                    "selected_membership": 0.5353071884449329,
+                    "sample_count": 56,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.46469281155506714,
+                        "High": 0.5353071884449329
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.13496214896440506,
+                    "selected_term": null,
+                    "selected_membership": 0.5027540413094223,
+                    "sample_count": 56,
+                    "mapping_status": "ambiguous_membership",
+                    "all_memberships": {
+                        "Low": 0.4972459586905777,
+                        "Medium": 0.5027540413094223,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.1816793754696846,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.9604865599137836,
+                    "sample_count": 56,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.03951344008621623,
+                        "High": 0.9604865599137836
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.3310405320981656,
+                    "samples": 67,
+                    "weighted_samples": 64.57400533498986,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.046635373749263916,
+            "rule_certainty": 0.6689594679018345
+        },
+        {
+            "conditions": {
+                "lOBlank": "High",
+                "loc": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 1.0,
+            "samples": 57,
+            "weighted_samples": 64.12983925741443,
+            "depth": 5,
+            "path_sample_count": 43,
+            "average_membership": 0.6793998404817235,
+            "minimum_membership": 0.5713231323234063,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "High",
+                    "selected_membership": 0.5713231323234063,
+                    "sample_count": 43,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.4286768676765938,
+                        "High": 0.5713231323234063
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.15910391509532928,
+                    "upper": 0.1816793754696846,
+                    "selected_term": "High",
+                    "selected_membership": 0.7874765486400408,
+                    "sample_count": 43,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.21252345135995918,
+                        "High": 0.7874765486400408
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 57,
+                    "weighted_samples": 64.12983925741443,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (lOBlank IS High) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.046314596821659414,
+            "rule_certainty": 1.0
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Medium",
+                "loc": "Low",
+                "v_g": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.15874829755962583,
+            "samples": 61,
+            "weighted_samples": 56.69779980249825,
+            "depth": 6,
+            "path_sample_count": 51,
+            "average_membership": 0.9941115319632051,
+            "minimum_membership": 0.9767678880247421,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9767678880247421,
+                    "sample_count": 51,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9767678880247421,
+                        "Medium": 0.023232111975257957,
+                        "High": 0.0
+                    }
+                },
+                "v_g": {
+                    "lower": null,
+                    "upper": 0.0003500251332297921,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 51,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.02035187091678381,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 51,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": 0.06801361590623856,
+                    "upper": 0.06821781769394875,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.999678239828078,
+                    "sample_count": 51,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.999678239828078,
+                        "High": 0.0003217601719219388
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.15874829755962583,
+                    "samples": 61,
+                    "weighted_samples": 56.69779980249825,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.040947174808710705,
+            "rule_certainty": 0.8412517024403742
+        },
+        {
+            "conditions": {
+                "b": "Medium",
+                "i": "Medium",
+                "lOBlank": "Medium",
+                "loc": "Medium",
+                "locCodeAndComment": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.10870881216625239,
+            "samples": 45,
+            "weighted_samples": 41.39811214319047,
+            "depth": 7,
+            "path_sample_count": 37,
+            "average_membership": 0.6426348849324541,
+            "minimum_membership": 0.5108125692778681,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6296909819437099,
+                    "sample_count": 37,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.6296909819437099,
+                        "High": 0.3703090180562903
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.12205105274915695,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5108125692778681,
+                    "sample_count": 37,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.489187430722132,
+                        "Medium": 0.5108125692778681,
+                        "High": 0.0
+                    }
+                },
+                "b": {
+                    "lower": 0.029181543737649918,
+                    "upper": null,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.5978814875693435,
+                    "sample_count": 37,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.022981509386343656,
+                        "Medium": 0.5978814875693435,
+                        "High": 0.3791370030443128
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.15910391509532928,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6099245210064844,
+                    "sample_count": 37,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.14789918111183398,
+                        "Medium": 0.6099245210064844,
+                        "High": 0.2421762978816815
+                    }
+                },
+                "locCodeAndComment": {
+                    "lower": null,
+                    "upper": 0.1279362514615059,
+                    "selected_term": "Low",
+                    "selected_membership": 0.8648648648648649,
+                    "sample_count": 37,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.8648648648648649,
+                        "Medium": 0.0,
+                        "High": 0.13513513513513514
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.10870881216625239,
+                    "samples": 45,
+                    "weighted_samples": 41.39811214319047,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Medium) AND (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.029897733961153417,
+            "rule_certainty": 0.8912911878337476
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "i": "Low",
+                "lOBlank": "Low",
+                "loc": "Low"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.06024865389755979,
+            "samples": 41,
+            "weighted_samples": 37.34805100096867,
+            "depth": 6,
+            "path_sample_count": 32,
+            "average_membership": 0.8826338266738208,
+            "minimum_membership": 0.6013518286299612,
+            "feature_score_details": {
+                "loc": {
+                    "lower": null,
+                    "upper": 0.03602169267833233,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 32,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": 0.08744272962212563,
+                    "upper": null,
+                    "selected_term": "Low",
+                    "selected_membership": 0.6013518286299612,
+                    "sample_count": 32,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.6013518286299612,
+                        "Medium": 0.39679979270600035,
+                        "High": 0.0018483786640385096
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.003442299785092473,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 32,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Low",
+                    "selected_membership": 0.9291834780653216,
+                    "sample_count": 32,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.9291834780653216,
+                        "Medium": 0.07081652193467833,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.06024865389755979,
+                    "samples": 41,
+                    "weighted_samples": 37.34805100096867,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.02697277810476734,
+            "rule_certainty": 0.9397513461024403
+        },
+        {
+            "conditions": {
+                "loc": "Medium"
+            },
+            "output_term": "High",
+            "defect_probability": 1.0,
+            "samples": 30,
+            "weighted_samples": 33.75254697758659,
+            "depth": 3,
+            "path_sample_count": 23,
+            "average_membership": 0.8378594406152138,
+            "minimum_membership": 0.8378594406152138,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10606422647833824,
+                    "upper": 0.10886405408382416,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.8378594406152138,
+                    "sample_count": 23,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.8378594406152138,
+                        "High": 0.1621405593847863
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 1.0,
+                    "samples": 30,
+                    "weighted_samples": 33.75254697758659,
+                    "depth": 3
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (loc IS Medium) THEN (Risk IS High) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.024376103590347094,
+            "rule_certainty": 1.0
+        },
+        {
+            "conditions": {
+                "ev_g": "Low",
+                "i": "High",
+                "loc": "High",
+                "v_g": "Low"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.40744020069491954,
+            "samples": 31,
+            "weighted_samples": 30.374847328942213,
+            "depth": 5,
+            "path_sample_count": 25,
+            "average_membership": 0.9987038312747323,
+            "minimum_membership": 0.994815325098929,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 25,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": null,
+                    "upper": 0.0013332371599972248,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 25,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 25,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": 0.20196248590946198,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.994815325098929,
+                    "sample_count": 25,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.005184674901070945,
+                        "High": 0.994815325098929
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.40744020069491954,
+                    "samples": 31,
+                    "weighted_samples": 30.374847328942213,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.021936727486756773,
+            "rule_certainty": 0.5925597993050804
+        },
+        {
+            "conditions": {
+                "branchCount": "High",
+                "ev_g": "Low",
+                "i": "Low",
+                "loc": "High"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.12196576477084477,
+            "samples": 30,
+            "weighted_samples": 27.673787837925286,
+            "depth": 5,
+            "path_sample_count": 24,
+            "average_membership": 0.8807687377944252,
+            "minimum_membership": 0.56970193456554,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 24,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 24,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.20196248590946198,
+                    "selected_term": "Low",
+                    "selected_membership": 0.56970193456554,
+                    "sample_count": 24,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.56970193456554,
+                        "Medium": 0.32570981409560035,
+                        "High": 0.1045882513388597
+                    }
+                },
+                "branchCount": {
+                    "lower": 0.14999999850988388,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.9533730166121609,
+                    "sample_count": 24,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.046626983387839084,
+                        "High": 0.9533730166121609
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.12196576477084477,
+                    "samples": 30,
+                    "weighted_samples": 27.673787837925286,
+                    "depth": 5
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (branchCount IS High) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.019986021188934545,
+            "rule_certainty": 0.8780342352291552
+        },
+        {
+            "conditions": {
+                "branchCount": "Medium",
+                "ev_g": "Low",
+                "i": "Low",
+                "loc": "High"
+            },
+            "output_term": "High",
+            "defect_probability": 0.7983411961649672,
+            "samples": 25,
+            "weighted_samples": 26.776287116952982,
+            "depth": 6,
+            "path_sample_count": 20,
+            "average_membership": 0.8064049976010776,
+            "minimum_membership": 0.4798902987668939,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": 0.32489046454429626,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 20,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 20,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.20196248590946198,
+                    "selected_term": "Low",
+                    "selected_membership": 0.7457296916374163,
+                    "sample_count": 20,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.7457296916374163,
+                        "Medium": 0.2238228367480161,
+                        "High": 0.03044747161456754
+                    }
+                },
+                "branchCount": {
+                    "lower": null,
+                    "upper": 0.14999999850988388,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.4798902987668939,
+                    "sample_count": 20,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.31788723676939573,
+                        "Medium": 0.4798902987668939,
+                        "High": 0.20222246446371042
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "High",
+                    "defect_probability": 0.7983411961649672,
+                    "samples": 25,
+                    "weighted_samples": 26.776287116952982,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (branchCount IS Medium) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.01933784579164201,
+            "rule_certainty": 0.7983411961649672
+        },
+        {
+            "conditions": {
+                "b": "High",
+                "ev_g": "Low",
+                "i": "High",
+                "loc": "High",
+                "v_g": "High"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.23811987925830103,
+            "samples": 20,
+            "weighted_samples": 18.899470346739903,
+            "depth": 7,
+            "path_sample_count": 12,
+            "average_membership": 0.9733588710362266,
+            "minimum_membership": 0.8667943551811327,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.2502959072589874,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "v_g": {
+                    "lower": 0.0013332371599972248,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 0.8667943551811327,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.04028301458391882,
+                        "Medium": 0.09292263023494844,
+                        "High": 0.8667943551811327
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": 0.20196248590946198,
+                    "upper": 0.5540318787097931,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "b": {
+                    "lower": 0.4102581739425659,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.23811987925830103,
+                    "samples": 20,
+                    "weighted_samples": 18.899470346739903,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS High) AND (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.013649205414949876,
+            "rule_certainty": 0.761880120741699
+        },
+        {
+            "conditions": {
+                "b": "Low",
+                "lOBlank": "Low",
+                "loc": "Medium",
+                "v_g": "Low"
+            },
+            "output_term": "Medium",
+            "defect_probability": 0.38464753413207026,
+            "samples": 18,
+            "weighted_samples": 17.54985745781359,
+            "depth": 7,
+            "path_sample_count": 13,
+            "average_membership": 0.9580464828202849,
+            "minimum_membership": 0.8321859312811397,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.06402263045310974,
+                    "upper": 0.10606422647833824,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.8321859312811397,
+                    "sample_count": 13,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.1303799391279725,
+                        "Medium": 0.8321859312811397,
+                        "High": 0.037434129590887835
+                    }
+                },
+                "v_g": {
+                    "lower": null,
+                    "upper": 0.03654571250081062,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 13,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "b": {
+                    "lower": null,
+                    "upper": 0.003442299785092473,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 13,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.045515356585383415,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 13,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Medium",
+                    "defect_probability": 0.38464753413207026,
+                    "samples": 18,
+                    "weighted_samples": 17.54985745781359,
+                    "depth": 7
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Medium) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.01267451442024712,
+            "rule_certainty": 0.6153524658679297
+        },
+        {
+            "conditions": {
+                "i": "Medium",
+                "lOBlank": "Medium",
+                "loc": "Medium",
+                "locCodeAndComment": "High"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.0769327221812001,
+            "samples": 16,
+            "weighted_samples": 14.624269977123223,
+            "depth": 6,
+            "path_sample_count": 12,
+            "average_membership": 0.7460013699850113,
+            "minimum_membership": 0.6130461937549124,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.10886405408382416,
+                    "upper": 0.2502959072589874,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6134110939214337,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.6134110939214337,
+                        "High": 0.3865889060785664
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.13954970240592957,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6130461937549124,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.38695380624508763,
+                        "Medium": 0.6130461937549124,
+                        "High": 0.0
+                    }
+                },
+                "lOBlank": {
+                    "lower": null,
+                    "upper": 0.15910391509532928,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.7575481922636991,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.03926971968508893,
+                        "Medium": 0.7575481922636991,
+                        "High": 0.20318208805121207
+                    }
+                },
+                "locCodeAndComment": {
+                    "lower": 0.1279362514615059,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 12,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.0769327221812001,
+                    "samples": 16,
+                    "weighted_samples": 14.624269977123223,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.010561653914067026,
+            "rule_certainty": 0.9230672778187999
+        },
+        {
+            "conditions": {
+                "branchCount": "Medium",
+                "ev_g": "Low",
+                "i": "Low",
+                "loc": "High"
+            },
+            "output_term": "Low",
+            "defect_probability": 0.23811987925830103,
+            "samples": 10,
+            "weighted_samples": 9.449735173369952,
+            "depth": 6,
+            "path_sample_count": 8,
+            "average_membership": 0.8575148806752015,
+            "minimum_membership": 0.6800595227008064,
+            "feature_score_details": {
+                "loc": {
+                    "lower": 0.32489046454429626,
+                    "upper": null,
+                    "selected_term": "High",
+                    "selected_membership": 1.0,
+                    "sample_count": 8,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.0,
+                        "Medium": 0.0,
+                        "High": 1.0
+                    }
+                },
+                "ev_g": {
+                    "lower": null,
+                    "upper": 0.0005220413440838456,
+                    "selected_term": "Low",
+                    "selected_membership": 1.0,
+                    "sample_count": 8,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 1.0,
+                        "Medium": 0.0,
+                        "High": 0.0
+                    }
+                },
+                "i": {
+                    "lower": null,
+                    "upper": 0.20196248590946198,
+                    "selected_term": "Low",
+                    "selected_membership": 0.75,
+                    "sample_count": 8,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.75,
+                        "Medium": 0.20009710943325076,
+                        "High": 0.04990289056674923
+                    }
+                },
+                "branchCount": {
+                    "lower": null,
+                    "upper": 0.14999999850988388,
+                    "selected_term": "Medium",
+                    "selected_membership": 0.6800595227008064,
+                    "sample_count": 8,
+                    "mapping_status": null,
+                    "all_memberships": {
+                        "Low": 0.13541666511446235,
+                        "Medium": 0.6800595227008064,
+                        "High": 0.18452381218473135
+                    }
+                }
+            },
+            "source_rules": [
+                {
+                    "output_term": "Low",
+                    "defect_probability": 0.23811987925830103,
+                    "samples": 10,
+                    "weighted_samples": 9.449735173369952,
+                    "depth": 6
+                }
+            ],
+            "source_rule_count": 1,
+            "rule_text": "IF (branchCount IS Medium) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+            "rule_weight": 0.05,
+            "rule_support": 0.006824602707474938,
+            "rule_certainty": 0.761880120741699
+        }
+    ],
+    "fuzzy_rules": [
+        "IF (lOBlank IS Medium) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.5174",
+        "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.7630",
+        "IF (i IS High) AND (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.3681",
+        "IF (b IS Low) AND (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.3731",
+        "IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.4063",
+        "IF (b IS High) AND (i IS High) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.2593",
+        "IF (b IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.2918",
+        "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS High) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.1763",
+        "IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Medium) WEIGHT 0.1839",
+        "IF (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.2714",
+        "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.1417",
+        "IF (b IS Low) AND (ev_g IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.2080",
+        "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.1438",
+        "IF (b IS High) AND (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.0918",
+        "IF (i IS High) AND (lOBlank IS Medium) AND (loc IS High) AND (locCodeAndComment IS High) THEN (Risk IS High) WEIGHT 0.0959",
+        "IF (ev_g IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Medium) WEIGHT 0.0804",
+        "IF (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Low) WEIGHT 0.0994",
+        "IF (b IS Low) AND (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0552",
+        "IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Medium) WEIGHT 0.0544",
+        "IF (i IS High) AND (lOBlank IS High) AND (loc IS Medium) THEN (Risk IS Medium) WEIGHT 0.0500",
+        "IF (ev_g IS Low) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0691",
+        "IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS Medium) THEN (Risk IS High) WEIGHT 0.0577",
+        "IF (b IS Low) AND (i IS Low) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.0546",
+        "IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.0500",
+        "IF (b IS Medium) AND (lOBlank IS Low) AND (loc IS Medium) THEN (Risk IS Medium) WEIGHT 0.0500",
+        "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS High) WEIGHT 0.0500",
+        "IF (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.0500",
+        "IF (lOBlank IS High) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0500",
+        "IF (b IS Low) AND (lOBlank IS Medium) AND (loc IS Low) AND (v_g IS Low) THEN (Risk IS Low) WEIGHT 0.0500",
+        "IF (b IS Medium) AND (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Low) WEIGHT 0.0500",
+        "IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.0500",
+        "IF (loc IS Medium) THEN (Risk IS High) WEIGHT 0.0500",
+        "IF (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0500",
+        "IF (branchCount IS High) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+        "IF (branchCount IS Medium) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS High) WEIGHT 0.0500",
+        "IF (b IS High) AND (ev_g IS Low) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+        "IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Medium) AND (v_g IS Low) THEN (Risk IS Medium) WEIGHT 0.0500",
+        "IF (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS High) THEN (Risk IS Low) WEIGHT 0.0500",
+        "IF (branchCount IS Medium) AND (ev_g IS Low) AND (i IS Low) AND (loc IS High) THEN (Risk IS Low) WEIGHT 0.0500"
+    ],
+    "final_anchors": {
+        "loc": [
+            0.0,
+            0.04389994264300512,
+            0.09128667678613356,
+            0.615985450260179,
+            1.0
+        ],
+        "v_g": [
+            0.0,
+            0.11881791626807195,
+            0.226495775197938,
+            0.496895518500049,
+            1.0000000000000002
+        ],
+        "ev_g": [
+            0.0,
+            0.41739478232914795,
+            0.43739478232914797,
+            0.8615137072268936,
+            1.0
+        ],
+        "i": [
+            0.0,
+            0.7385058785105187,
+            0.8936352533461337,
+            0.9169420482009158,
+            1.0
+        ],
+        "b": [
+            0.0,
+            0.5555495698856199,
+            0.7743026829445951,
+            0.7943026829445952,
+            1.0
+        ],
+        "lOBlank": [
+            0.0,
+            0.057558760016644284,
+            0.09142199181713817,
+            0.5721229637222063,
+            1.0
+        ],
+        "locCodeAndComment": [
+            0.0,
+            0.09206698608247543,
+            0.2913610728377445,
+            0.4699882681579366,
+            1.0
+        ],
+        "branchCount": [
+            0.0,
+            0.16673075999338316,
+            0.24189329411288918,
+            0.7615106317174722,
+            1.0
+        ]
+    },
+    "ga_config": {
+        "population_size": 20,
+        "num_generations": 15,
+        "num_parents_mating": 8,
+        "mutation_percent_genes": 15
+    },
+    "fitness_history": [
+        0.27135325270549693,
+        0.27199187969252403,
+        0.27534509505537763,
+        0.27534509505537763,
+        0.27564283549836444,
+        0.27646326043849256,
+        0.27646326043849256,
+        0.27646326043849256,
+        0.27786666328809195,
+        0.27786666328809195,
+        0.27786666328809195,
+        0.27786666328809195,
+        0.2780637370427099,
+        0.27977545803229065,
+        0.28024429726065037,
+        0.28058931317990593
+    ]
+}

@@ -1,0 +1,195 @@
+================================================================================
+--- DECISION TREE TRAINING & OPTIMIZATION (PHASE 3) - CART ALGORITHM ---
+================================================================================
+
+[INFO] Decision Tree Type:
+--------------------------------------------------------------------------------
+
+🌳 ALGORITHM: CART (Classification and Regression Trees)
+────────────────────────────────────────────────────────
+• نوع: Binary Classification Decision Tree
+• معیار تقسیم: Gini Index یا Entropy
+• روش: Greedy (بهترین تقسیم در هر گره)
+• خصوصیات:
+  ✅ تک درخت (غیر ensemble)
+  ✅ قابل تفسیر (Interpretable)
+  ✅ قوانین استخراج شدنی
+  ✅ برای Fuzzification مناسب
+
+تفاوت Gini vs Entropy:
+• Gini: معیار impurity با محاسبات معمولاً ساده‌تر
+• Entropy: مبتنی بر Information Gain
+• انتخاب نهایی: بر اساس Cross-Validation
+
+
+[STEP 1] Loading filtered data...
+--------------------------------------------------------------------------------
+✓ Data Loaded Successfully
+  X_train_selected shape: (9939, 8)
+  X_test_selected shape: (2485, 8)
+  Total Features: 8
+  Features: ['loc', 'v(g)', 'ev(g)', 'i', 'b', 'lOBlank', 'locCodeAndComment', 'branchCount']
+
+  y_train distribution: {0: 5522, 1: 4417}
+  y_test distribution: {0: 1381, 1: 1104}
+
+[STEP 2] GridSearchCV - Finding Best Parameters...
+--------------------------------------------------------------------------------
+🔍 Parameter Grid:
+  ccp_alpha: [-5.42101086e-20  1.08569437e-18  2.04894015e-05  4.17989134e-05
+  6.31438975e-05  7.18697488e-05  7.99019869e-05  8.56531049e-05
+  9.05567429e-05  9.79000441e-05  1.02217373e-04  1.07840797e-04
+  1.17629483e-04  1.25594760e-04  1.29357739e-04  1.39314572e-04
+  1.42972883e-04  1.50955569e-04  1.59802653e-04  1.67293706e-04
+  1.75991746e-04  1.87061071e-04  2.06179818e-04  2.24463236e-04
+  2.54508472e-04  2.81311995e-04  3.19352389e-04  3.77923931e-04
+  5.31947619e-04  1.01249440e-02]
+  max_depth: [5, 6, 7, 8]
+  min_samples_split: [5, 10, 20, 30]
+  min_samples_leaf: [5, 10, 15, 20]
+  criterion: ['gini', 'entropy']
+
+  Total combinations to test: 3840
+  With 5-fold CV: 19200 model trainings
+
+⏳ Running GridSearchCV (this may take a few minutes)...
+--------------------------------------------------------------------------------
+Fitting 5 folds for each of 3840 candidates, totalling 19200 fits
+
+[DEPTH ANALYSIS]
+--------------------------------------------------------------------------------
+ param_max_depth  mean_cv_f1  mean_train_f1   f1_gap
+               5    0.662735       0.670918 0.008183
+               6    0.669126       0.681362 0.012236
+               7    0.701999       0.719267 0.017268
+               8    0.696214       0.729115 0.032901
+
+✅ GridSearchCV Completed!
+
+  Best Parameters:
+    • ccp_alpha: 0.00037792393112774463
+    • criterion: gini
+    • max_depth: 7
+    • min_samples_leaf: 10
+    • min_samples_split: 30
+
+  Best CV F1-Score: 0.7020
+
+[OVERFITTING CHECK]
+--------------------------------------------------------------------------------
+  Mean Training F1: 0.7141
+  Mean CV F1:       0.7020
+  Train-CV Gap:     0.0121
+  ✓ Overfitting risk: LOW
+
+[STEP 3] Training Best Decision Tree...
+--------------------------------------------------------------------------------
+✓ Decision Tree trained with best parameters
+✓ Tree depth: 7
+✓ Tree leaf nodes: 45
+
+[STEP 4] Optimizing Decision Threshold...
+--------------------------------------------------------------------------------
+✓ Default threshold (0.50) OOF F1: 0.7019
+✓ Best threshold found: 0.44 → OOF F1: 0.7024
+
+[STEP 5] Model Evaluation on Test Set...
+--------------------------------------------------------------------------------
+✓ Default threshold (0.50) Test F1: 0.6838
+✓ Optimized threshold (0.44) selected from training OOF predictions
+
+================================================================================
+FINAL PERFORMANCE METRICS:
+================================================================================
+Accuracy:  0.7070 (70.70%)
+Precision: 0.6382 (63.82%)
+Recall:    0.7862 (78.62%)
+F1-Score:  0.7045
+ROC-AUC:   0.7826
+
+Confusion Matrix:
+  True Negatives:  889
+  False Positives: 492
+  False Negatives: 236
+  True Positives:  868
+
+Additional Metrics:
+  Specificity (True Negative Rate): 0.6437
+  Sensitivity (True Positive Rate): 0.7862
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.64      0.71      1381
+           1       0.64      0.79      0.70      1104
+
+    accuracy                           0.71      2485
+   macro avg       0.71      0.71      0.71      2485
+weighted avg       0.72      0.71      0.71      2485
+
+
+[STEP 6] Feature Importance Analysis...
+--------------------------------------------------------------------------------
+          feature  importance  importance_percent
+          lOBlank    0.447116           44.711603
+              loc    0.361282           36.128194
+                b    0.071403            7.140291
+                i    0.049760            4.976041
+             v(g)    0.039598            3.959778
+            ev(g)    0.015229            1.522875
+locCodeAndComment    0.009565            0.956515
+      branchCount    0.006047            0.604704
+
+✓ Feature importance saved to: ../models/feature_importance.csv
+
+[STEP 7] Extracting Decision Rules...
+--------------------------------------------------------------------------------
+✓ Text rules saved to: ../models/tree_rules_text.txt
+
+✓ Extracted 45 rules
+✓ Rules saved to: ../models/extracted_rules.csv
+
+First 5 Rules:
+ rule_id                                                                                                                 condition  predicted_class  confidence  samples  defect_prob
+       0                     loc <= 0.1061 AND lOBlank <= 0.0455 AND b <= 0.0069 AND b <= 0.0034 AND loc <= 0.0360 AND i <= 0.0874                0    0.659259      400     0.340741
+       1                      loc <= 0.1061 AND lOBlank <= 0.0455 AND b <= 0.0069 AND b <= 0.0034 AND loc <= 0.0360 AND i > 0.0874                0    0.939751       41     0.060249
+       2 loc <= 0.1061 AND lOBlank <= 0.0455 AND b <= 0.0069 AND b <= 0.0034 AND loc > 0.0360 AND v(g) <= 0.0365 AND loc <= 0.0640                1    0.793126       61     0.793126
+       3  loc <= 0.1061 AND lOBlank <= 0.0455 AND b <= 0.0069 AND b <= 0.0034 AND loc > 0.0360 AND v(g) <= 0.0365 AND loc > 0.0640                0    0.615352       18     0.384648
+       4  loc <= 0.1061 AND lOBlank <= 0.0455 AND b <= 0.0069 AND b <= 0.0034 AND loc > 0.0360 AND v(g) > 0.0365 AND loc <= 0.0913                0    0.644356      271     0.355644
+
+[STEP 8] Creating Visualizations...
+--------------------------------------------------------------------------------
+✓ Visualizations saved to: ../report/decision_tree_visualizations_2026-09-07_09-04-47.png
+
+[STEP 9] Saving Model & Configuration...
+--------------------------------------------------------------------------------
+✓ Model saved to: ../models/decision_tree_model_optimized.pkl
+✓ Configuration saved to: ../models/decision_tree_config.json
+
+================================================================================
+--- DECISION TREE OPTIMIZATION COMPLETED ---
+================================================================================
+
+📊 FINAL SUMMARY:
+  Algorithm: CART (Classification and Regression Trees)
+  Features: 8
+  Accuracy: 0.7070 (70.70%)
+  Precision: 0.6382 (63.82%)
+  Recall: 0.7862 (78.62%)
+  F1-Score: 0.7045
+  ROC-AUC: 0.7826
+  Rules extracted: 45
+  Tree depth: 7
+  Decision threshold: 0.44
+
+📁 OUTPUT FILES:
+  ✓ decision_tree_model_optimized.pkl
+  ✓ extracted_rules.csv
+  ✓ tree_rules_text.txt
+  ✓ feature_importance.csv
+  ✓ decision_tree_config.json
+  ✓ decision_tree_visualizations_*.png
+
+✅ Ready for Phase 4: Fuzzification!
+📝 Report saved to: ../report/decision_tree_optimized_2026-09-07_09-04-47.txt
+================================================================================

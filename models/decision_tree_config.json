@@ -1,0 +1,58 @@
+{
+  "model_info": {
+    "model_type": "DecisionTreeClassifier (CART Algorithm)",
+    "selected_features": [
+      "loc",
+      "v(g)",
+      "ev(g)",
+      "i",
+      "b",
+      "lOBlank",
+      "locCodeAndComment",
+      "branchCount"
+    ],
+    "feature_count": 8,
+    "training_date": "2026-09-07_09-04-47"
+  },
+  "model_parameters": {
+    "max_depth": 7,
+    "min_samples_split": 30,
+    "min_samples_leaf": 10,
+    "criterion": "gini",
+    "ccp_alpha": 0.00037792393112774463,
+    "class_weight": "balanced",
+    "decision_threshold": 0.4400000000000002
+  },
+  "gridsearch_info": {
+    "best_cv_score": 0.7019987540169287,
+    "cv_folds": 5,
+    "scoring_metric": "f1_weighted",
+    "total_combinations_tested": 3840
+  },
+  "threshold_optimization": {
+    "method": "Out-of-Fold predictions on training data",
+    "default_threshold": 0.5,
+    "optimized_threshold": 0.4400000000000002,
+    "best_oof_f1": 0.7024117586171204
+  },
+  "model_structure": {
+    "tree_depth": 7,
+    "tree_leaf_nodes": 45,
+    "total_rules": 45
+  },
+  "performance_metrics": {
+    "accuracy": 0.7070422535211267,
+    "precision": 0.638235294117647,
+    "recall": 0.7862318840579711,
+    "f1_score": 0.7045454545454546,
+    "roc_auc": 0.7826316521319355,
+    "specificity": 0.6437364228819696,
+    "sensitivity": 0.7862318840579711
+  },
+  "confusion_matrix": {
+    "true_negatives": 889,
+    "false_positives": 492,
+    "false_negatives": 236,
+    "true_positives": 868
+  }
+}

@@ -1,0 +1,507 @@
+================================================================================
+PHASE 4 - MAMDANI FUZZY SYSTEM (CART-GUIDED V5)
+================================================================================
+
+Architecture:
+BPSO Feature Selection
+        ↓
+CART Decision Tree
+        ↓
+CART Leaf Paths
+        ↓
+Feature-specific Data-aware Fuzzy Mapping
+        ↓
+Ambiguity-aware Rule Construction
+        ↓
+True-Duplicate Rule Merging
+        ↓
+Conflict-Preserving Rule Construction
+        ↓
+Mamdani Fuzzy Inference
+        ↓
+Defuzzification
+        ↓
+Phase 5: GA Membership Optimization
+
+[STEP 1] Loading data...
+✓ X_train: (9939, 8)
+✓ X_test:  (2485, 8)
+✓ Features: ['loc', 'v_g', 'ev_g', 'i', 'b', 'lOBlank', 'locCodeAndComment', 'branchCount']
+✓ Test class distribution: {0: 1381, 1: 1104}
+
+[STEP 2] Loading CART decision tree...
+✓ CART model: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/models/decision_tree_model_optimized.pkl
+✓ Tree depth: 7
+✓ Tree leaves: 45
+
+[STEP 3] Building membership functions...
+✓ Membership variables: 8
+
+  loc:
+    Low    = (0.0, 0.03328726917853053, 0.08463097333777381)
+    Medium = (0.03328726917853053, 0.08463097333777381, 0.2303394583311112)
+    High   = (0.08463097333777381, 0.2303394583311112, 1.0)
+
+  v_g:
+    Low    = (0.0, 0.023559505048279555, 0.052405658894433355)
+    Medium = (0.023559505048279555, 0.052405658894433355, 0.19716221953813845)
+    High   = (0.052405658894433355, 0.19716221953813845, 1.0000000000000002)
+
+  ev_g:
+    Low    = (0.0, 0.02, 0.04)
+    Medium = (0.02, 0.04, 0.1326842620037496)
+    High   = (0.04, 0.1326842620037496, 1.0)
+
+  i:
+    Low    = (0.0, 0.07038770011937001, 0.14399991145421864)
+    Medium = (0.07038770011937001, 0.14399991145421864, 0.27292164583830947)
+    High   = (0.14399991145421864, 0.27292164583830947, 1.0)
+
+  b:
+    Low    = (0.0, 0.02, 0.04)
+    Medium = (0.02, 0.04, 0.1360374911202525)
+    High   = (0.04, 0.1360374911202525, 1.0)
+
+  lOBlank:
+    Low    = (0.0, 0.02, 0.0681397676129232)
+    Medium = (0.02, 0.0681397676129232, 0.19882893477651203)
+    High   = (0.0681397676129232, 0.19882893477651203, 1.0)
+
+  locCodeAndComment:
+    Low    = (0.0, 0.03198406286537647, 0.051984062865376476)
+    Medium = (0.03198406286537647, 0.051984062865376476, 0.07198406286537648)
+    High   = (0.051984062865376476, 0.07198406286537648, 1.0)
+
+  branchCount:
+    Low    = (0.0, 0.05249999962747089, 0.08249999962747097)
+    Medium = (0.05249999962747089, 0.08249999962747097, 0.18749999962747088)
+    High   = (0.08249999962747097, 0.18749999962747088, 1.0)
+
+[STEP 4] Building Mamdani fuzzy system...
+✓ Input variables: 8
+✓ Output variable: Risk
+✓ Output terms: ('Low', 'Medium', 'High')
+
+[STEP 5] Extracting CART-guided Mamdani rules...
+✓ Raw CART leaf rules: 45
+✓ Raw duplicate rules: 3
+✓ Raw conflicting rules: 9
+✓ Raw duplicate groups: 3
+✓ Raw conflict groups: 6
+
+================================================================================
+RAW CONFLICT DETAILS
+================================================================================
+
+Conflict Group 1
+--------------------------------------------------------------------------------
+Conditions:
+  b IS Low
+  i IS Low
+  lOBlank IS Low
+  loc IS Low
+
+Conflicting rules:
+  Rule 1: output=Medium, p=0.3407, samples=400, depth=6, path_samples=400, avg_membership=0.9871, min_membership=0.9634
+  Rule 2: output=Low, p=0.0602, samples=41, depth=6, path_samples=41, avg_membership=0.8862, min_membership=0.6041
+
+Conflict Group 2
+--------------------------------------------------------------------------------
+Conditions:
+  b IS Low
+  lOBlank IS Low
+  loc IS Low
+
+Conflicting rules:
+  Rule 1: output=High, p=1.0000, samples=28, depth=4, path_samples=28, avg_membership=0.9871, min_membership=0.9613
+  Rule 2: output=Low, p=0.1867, samples=535, depth=6, path_samples=535, avg_membership=0.9340, min_membership=0.8712
+  Rule 3: output=High, p=1.0000, samples=47, depth=6, path_samples=47, avg_membership=0.9483, min_membership=0.8952
+  Rule 4: output=Low, p=0.0941, samples=782, depth=6, path_samples=782, avg_membership=0.8631, min_membership=0.7633
+  Rule 5: output=High, p=1.0000, samples=102, depth=5, path_samples=102, avg_membership=0.7430, min_membership=0.6850
+
+Conflict Group 3
+--------------------------------------------------------------------------------
+Conditions:
+  b IS Low
+  lOBlank IS Medium
+  loc IS Low
+  v_g IS Low
+
+Conflicting rules:
+  Rule 1: output=Low, p=0.1587, samples=61, depth=6, path_samples=61, avg_membership=0.9951, min_membership=0.9808
+  Rule 2: output=Medium, p=0.4087, samples=132, depth=6, path_samples=132, avg_membership=0.9067, min_membership=0.7191
+
+Conflict Group 4
+--------------------------------------------------------------------------------
+Conditions:
+  branchCount IS Medium
+  ev_g IS Low
+  i IS Low
+  loc IS High
+
+Conflicting rules:
+  Rule 1: output=High, p=0.7983, samples=25, depth=6, path_samples=25, avg_membership=0.8128, min_membership=0.4934
+  Rule 2: output=Low, p=0.2381, samples=10, depth=6, path_samples=10, avg_membership=0.8446, min_membership=0.6783
+
+Conflict Group 5
+--------------------------------------------------------------------------------
+Conditions:
+  b IS High
+  ev_g IS Low
+  i IS High
+  loc IS High
+  v_g IS High
+
+Conflicting rules:
+  Rule 1: output=High, p=0.7089, samples=171, depth=7, path_samples=171, avg_membership=0.9277, min_membership=0.7367
+  Rule 2: output=Low, p=0.2381, samples=20, depth=7, path_samples=20, avg_membership=0.9724, min_membership=0.8619
+
+Conflict Group 6
+--------------------------------------------------------------------------------
+Conditions:
+  b IS High
+  ev_g IS High
+  i IS High
+  loc IS High
+  v_g IS High
+
+Conflicting rules:
+  Rule 1: output=Medium, p=0.5993, samples=123, depth=7, path_samples=123, avg_membership=0.9067, min_membership=0.5672
+  Rule 2: output=High, p=0.8202, samples=637, depth=7, path_samples=637, avg_membership=0.9895, min_membership=0.9474
+
+================================================================================
+
+================================================================================
+CONFLICT STRENGTH ANALYSIS
+================================================================================
+
+Conflict Group 1
+--------------------------------------------------------------------------------
+Conditions:
+  b IS Low
+  i IS Low
+  lOBlank IS Low
+  loc IS Low
+
+Rules:
+
+  Rule 1
+    Output:           Medium
+    Probability:      0.3407
+    Samples:          400
+    Sample ratio:     0.9070
+    Avg membership:   0.9871
+    Min membership:   0.9634
+    Diagnostic score: 1.037922
+
+  Rule 2
+    Output:           Low
+    Probability:      0.0602
+    Samples:          41
+    Sample ratio:     0.0930
+    Avg membership:   0.8862
+    Min membership:   0.6041
+    Diagnostic score: 0.118619
+
+Conflict Group 2
+--------------------------------------------------------------------------------
+Conditions:
+  b IS Low
+  lOBlank IS Low
+  loc IS Low
+
+Rules:
+
+  Rule 1
+    Output:           High
+    Probability:      1.0000
+    Samples:          28
+    Sample ratio:     0.0187
+    Avg membership:   0.9871
+    Min membership:   0.9613
+    Diagnostic score: 0.027750
+
+  Rule 2
+    Output:           Low
+    Probability:      0.1867
+    Samples:          535
+    Sample ratio:     0.3581
+    Avg membership:   0.9340
+    Min membership:   0.8712
+    Diagnostic score: 0.439252
+
+  Rule 3
+    Output:           High
+    Probability:      1.0000
+    Samples:          47
+    Sample ratio:     0.0315
+    Avg membership:   0.9483
+    Min membership:   0.8952
+    Diagnostic score: 0.044748
+
+  Rule 4
+    Output:           Low
+    Probability:      0.0941
+    Samples:          782
+    Sample ratio:     0.5234
+    Avg membership:   0.8631
+    Min membership:   0.7633
+    Diagnostic score: 0.635100
+
+  Rule 5
+    Output:           High
+    Probability:      1.0000
+    Samples:          102
+    Sample ratio:     0.0683
+    Avg membership:   0.7430
+    Min membership:   0.6850
+    Diagnostic score: 0.076091
+
+Conflict Group 3
+--------------------------------------------------------------------------------
+Conditions:
+  b IS Low
+  lOBlank IS Medium
+  loc IS Low
+  v_g IS Low
+
+Rules:
+
+  Rule 1
+    Output:           Low
+    Probability:      0.1587
+    Samples:          61
+    Sample ratio:     0.3161
+    Avg membership:   0.9951
+    Min membership:   0.9808
+    Diagnostic score: 0.421854
+
+  Rule 2
+    Output:           Medium
+    Probability:      0.4087
+    Samples:          132
+    Sample ratio:     0.6839
+    Avg membership:   0.9067
+    Min membership:   0.7191
+    Diagnostic score: 0.676693
+
+Conflict Group 4
+--------------------------------------------------------------------------------
+Conditions:
+  branchCount IS Medium
+  ev_g IS Low
+  i IS Low
+  loc IS High
+
+Rules:
+
+  Rule 1
+    Output:           High
+    Probability:      0.7983
+    Samples:          25
+    Sample ratio:     0.7143
+    Avg membership:   0.8128
+    Min membership:   0.4934
+    Diagnostic score: 0.753740
+
+  Rule 2
+    Output:           Low
+    Probability:      0.2381
+    Samples:          10
+    Sample ratio:     0.2857
+    Avg membership:   0.8446
+    Min membership:   0.6783
+    Diagnostic score: 0.304501
+
+Conflict Group 5
+--------------------------------------------------------------------------------
+Conditions:
+  b IS High
+  ev_g IS Low
+  i IS High
+  loc IS High
+  v_g IS High
+
+Rules:
+
+  Rule 1
+    Output:           High
+    Probability:      0.7089
+    Samples:          171
+    Sample ratio:     0.8953
+    Avg membership:   0.9277
+    Min membership:   0.7367
+    Diagnostic score: 1.004040
+
+  Rule 2
+    Output:           Low
+    Probability:      0.2381
+    Samples:          20
+    Sample ratio:     0.1047
+    Avg membership:   0.9724
+    Min membership:   0.8619
+    Diagnostic score: 0.128485
+
+Conflict Group 6
+--------------------------------------------------------------------------------
+Conditions:
+  b IS High
+  ev_g IS High
+  i IS High
+  loc IS High
+  v_g IS High
+
+Rules:
+
+  Rule 1
+    Output:           Medium
+    Probability:      0.5993
+    Samples:          123
+    Sample ratio:     0.1618
+    Avg membership:   0.9067
+    Min membership:   0.5672
+    Diagnostic score: 0.161312
+
+  Rule 2
+    Output:           High
+    Probability:      0.8202
+    Samples:          637
+    Sample ratio:     0.8382
+    Avg membership:   0.9895
+    Min membership:   0.9474
+    Diagnostic score: 1.094913
+
+================================================================================
+
+✓ Raw contradictory antecedents: 6
+⚠ Raw contradictions detected before rule merging.
+
+Raw Rule Output Distribution:
+  Low:    13
+  Medium: 16
+  High:   16
+
+Fuzzy Mapping Statistics:
+  Accepted mappings: 160
+  Weak mappings: 0
+  Ambiguous mappings: 1
+
+✓ Final fuzzy rules after true-duplicate merging: 39
+✓ True duplicate rules merged: 6
+✓ Conflicting rules preserved: 9
+✓ Empty antecedent rules removed: 0
+✓ Remaining contradictory antecedents: 6
+⚠ WARNING: contradictory antecedents remain.
+
+Final Rule Output Distribution:
+  Low:    12
+  Medium: 14
+  High:   13
+✓ Mamdani rules added: 39
+✓ Rule weights — min: 0.050, mean: 0.144, max: 0.763
+
+First 10 Mamdani Rules:
+  IF (lOBlank IS Medium) AND (loc IS Medium) AND (v_g IS Medium) THEN (Risk IS Medium) WEIGHT 0.5174
+  IF (b IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.7630
+  IF (i IS High) AND (lOBlank IS High) AND (loc IS High) THEN (Risk IS Medium) WEIGHT 0.3681
+  IF (b IS Low) AND (i IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.3731
+  IF (b IS High) AND (ev_g IS High) AND (i IS High) AND (loc IS High) AND (v_g IS High) THEN (Risk IS High) WEIGHT 0.4063
+  IF (b IS High) AND (i IS High) AND (lOBlank IS Medium) AND (loc IS Medium) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.2593
+  IF (b IS Medium) AND (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS Low) WEIGHT 0.2918
+  IF (b IS Low) AND (lOBlank IS Low) AND (loc IS High) AND (locCodeAndComment IS Low) THEN (Risk IS Medium) WEIGHT 0.1763
+  IF (b IS Low) AND (i IS Low) AND (lOBlank IS Low) AND (loc IS Low) THEN (Risk IS Medium) WEIGHT 0.1839
+  IF (lOBlank IS Medium) AND (loc IS Low) THEN (Risk IS High) WEIGHT 0.2714
+
+[STEP 6] Running Mamdani inference...
+✓ Test samples: 2485
+✓ Zero-firing samples: 0
+✓ Valid fuzzy predictions: 2485
+
+Fuzzy Score Distribution:
+  Mean: 0.471455922314157
+  Std:  0.08972261652948428
+  Min:  0.0
+  Max:  0.7561809534086579
+  Predicted Class 0: 1070
+  Predicted Class 1: 1415
+
+[STEP 7] Final test evaluation...
+
+================================================================================
+PHASE 4 MAMDANI FUZZY SYSTEM - FINAL RESULTS
+================================================================================
+Threshold:           0.50
+Accuracy:            0.6093
+Balanced Accuracy:   0.6185
+Precision:           0.5470
+Recall/Sensitivity:  0.7011
+Specificity:         0.5358
+F1-Score:            0.6145
+MCC:                 0.2378
+ROC-AUC:             0.6458
+PR-AUC:              0.5354
+Valid predictions:   2485
+Invalid predictions: 0
+
+Confusion Matrix:
+TN=740, FP=641, FN=330, TP=774
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.69      0.54      0.60      1381
+           1       0.55      0.70      0.61      1104
+
+    accuracy                           0.61      2485
+   macro avg       0.62      0.62      0.61      2485
+weighted avg       0.63      0.61      0.61      2485
+
+
+[STEP 8] Saving rules...
+✓ Rule CSV: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/models/mamdani_rules_cart_v5.csv
+✓ Rule text: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/models/mamdani_rules_cart_v5.txt
+
+[STEP 9] Saving Phase 4 configuration...
+✓ JSON report: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/report/phase4_mamdani_fuzzy_v4_2026-09-08_00-09-06.json
+
+[STEP 10] Saving fuzzy scores...
+✓ Fuzzy scores: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/report/phase4_mamdani_scores_v5_2026-09-08_00-09-06.csv
+
+================================================================================
+PHASE 4 MAMDANI V4 COMPLETED
+================================================================================
+Feature Selection: BPSO
+Decision Tree: CART
+Fuzzy Inference: Mamdani
+Features: 8
+Raw CART rules: 45
+Raw contradictory antecedents: 6
+Final Mamdani rules: 39
+Accuracy: 0.6093
+Balanced Accuracy: 0.6185
+Precision: 0.5470
+Recall: 0.7011
+Specificity: 0.5358
+F1-Score: 0.6145
+MCC: 0.2378
+ROC-AUC: 0.6458
+PR-AUC: 0.5354
+Zero-firing: 0
+Remaining contradictions: 6
+
+Mapping statistics:
+  Accepted: 160
+  Weak: 0
+  Ambiguous: 1
+
+Output distribution:
+  Rule Low: 12
+  Rule Medium: 14
+  Rule High: 13
+
+Prediction distribution:
+  Class 0: 1070
+  Class 1: 1415
+
+Report: /home/sorushkrg/myFiles/payan nameh/project/project-risk-fuzzy-ga2/report/phase4_mamdani_fuzzy_v5_2026-09-08_00-09-06.txt
+================================================================================

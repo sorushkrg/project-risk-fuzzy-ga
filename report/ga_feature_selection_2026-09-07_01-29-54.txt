@@ -1,0 +1,99 @@
+======================================================================
+--- GENETIC ALGORITHM FEATURE SELECTION (OPTIMIZED) ---
+======================================================================
+
+[STEP 1] Loading training data...
+----------------------------------------------------------------------
+✓ Data Loaded Successfully
+  X_train shape: (9939, 21)
+  Total Initial Features: 21
+  Training samples: 9939
+
+[STEP 2] Genetic Algorithm Parameters Setup (Optimized)
+----------------------------------------------------------------------
+Population Size: 50
+Generations: 100
+Mutation Rate: 10.0%
+Crossover Rate: 80.0%
+Elite Size (Elitism): 5
+Tournament Size: 3
+Feature constraints: [8, 15]
+Early Stopping Patience: 25
+
+[STEP 3] Initializing population...
+----------------------------------------------------------------------
+✓ Initial population created: 50 individuals
+✓ Initial best fitness: 0.7015
+
+[STEP 4] Starting Genetic Algorithm Optimization...
+----------------------------------------------------------------------
+Generation 001/100 | Best: 0.7015 | Avg: 0.6803 | Features: 12
+Generation 005/100 | Best: 0.7046 | Avg: 0.6908 | Features: 8
+Generation 010/100 | Best: 0.7060 | Avg: 0.6662 | Features: 8
+Generation 015/100 | Best: 0.7064 | Avg: 0.6793 | Features: 8
+Generation 020/100 | Best: 0.7070 | Avg: 0.7058 | Features: 8
+Generation 025/100 | Best: 0.7070 | Avg: 0.7062 | Features: 8
+Generation 030/100 | Best: 0.7070 | Avg: 0.7067 | Features: 8
+Generation 035/100 | Best: 0.7070 | Avg: 0.7070 | Features: 8
+Generation 040/100 | Best: 0.7070 | Avg: 0.7069 | Features: 8
+Generation 045/100 | Best: 0.7070 | Avg: 0.7067 | Features: 8
+
+>>> Early Stopping: No improvement for 25 generations
+>>> Stopping at generation 45/100
+
+[STEP 5] Extracting selected features...
+----------------------------------------------------------------------
+✓ Final Best Fitness: 0.7070
+✓ Total Selected Features: 8 out of 21
+✓ Reduction: 61.9%
+
+Selected Features:
+  1. loc
+  2. v(g)
+  3. ev(g)
+  4. iv(g)
+  5. i
+  6. lOCode
+  7. lOBlank
+  8. locCodeAndComment
+
+[STEP 6] Saving convergence curve...
+----------------------------------------------------------------------
+✓ Convergence curve saved to: ../../report/ga_convergence_curve_2026-09-07_01-29-54.png
+
+[STEP 7] Filtering X_train...
+----------------------------------------------------------------------
+✓ X_train filtered: (9939, 8)
+
+[STEP 8] Loading and filtering X_test...
+----------------------------------------------------------------------
+✓ X_test loaded: (2485, 21)
+✓ X_test filtered: (2485, 8)
+✅ X_train and X_test both have 8 features now!
+
+[STEP 9] Saving filtered datasets...
+----------------------------------------------------------------------
+✓ Saved: ../../data/processed/X_train_selected_ga.csv
+✓ Saved: ../../data/processed/X_test_selected_ga.csv
+✓ Saved: ../../data/processed/selected_feature_names_ga.txt
+
+======================================================================
+--- GENETIC ALGORITHM FEATURE SELECTION (OPTIMIZED) COMPLETED ---
+======================================================================
+
+📊 SUMMARY:
+  Original features: 21
+  Selected features: 8
+  Reduction: 61.9%
+  Best Fitness: 0.7070
+  Total generations: 45
+
+📁 OUTPUT FILES:
+  ✓ X_train_selected_ga.csv
+  ✓ X_test_selected_ga.csv
+  ✓ selected_feature_names_ga.txt
+  ✓ ga_convergence_curve_*.png (visualization)
+
+✅ Ready for Phase 3: Decision Tree (GA version)!
+📝 Report: ../../report/ga_feature_selection_2026-09-07_01-29-54.txt
+======================================================================

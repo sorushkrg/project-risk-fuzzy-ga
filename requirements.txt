@@ -1,0 +1,12 @@
+simpful
+tqdm
+joblib
+imbalanced-learn
+numpy>=1.23
+pandas>=1.5
+scikit-fuzzy>=0.4.2
+scikit-learn>=1.2
+pygad>=3.2
+matplotlib>=3.7
+seaborn>=0.12
+openpyxl>=3.1

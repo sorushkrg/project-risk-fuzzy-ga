@@ -1,0 +1,7 @@
+Metric,BPSO,GA
+Number of Features Selected,8,8
+Feature Reduction %,61.9%,61.9%
+Total Train Samples,9939,9939
+Total Test Samples,2485,2485
+Algorithm Complexity,Medium (Particle-based),Medium (Population-based)
+Convergence Speed,Fast (50 iterations),Variable
