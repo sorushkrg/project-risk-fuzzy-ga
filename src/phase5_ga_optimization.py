@@ -76,6 +76,8 @@ FINAL_SUBDIVISIONS = 1000
 # حداقل فاصله‌ی نسبی مجاز بین anchorهای داخلی
 MIN_INTERIOR_GAP_RATIO = 0.02
 
+GA_ANCHOR_SEARCH_RADIUS_RATIO = 0.30
+
 
 # =========================================================
 # GA-SPECIFIC MAMDANI INFERENCE
@@ -341,12 +343,36 @@ def run_ga_optimization():
 
         vmin, vmax = fixed_bounds[feature]
 
-        for _ in range(3):
+        data_range = vmax - vmin
 
-            gene_space.append(
-                {"low": vmin, "high": vmax}
+        search_radius = (
+            data_range
+            * GA_ANCHOR_SEARCH_RADIUS_RATIO
+        )
+
+        # x1, x2, x3 baseline (anchors[feature] = [x0,x1,x2,x3,x4])
+        baseline_interior_points = (
+            anchors[feature][1:4]
+        )
+
+        for baseline_value in baseline_interior_points:
+
+            gene_low = max(
+                vmin,
+                float(baseline_value) - search_radius,
             )
 
+            gene_high = min(
+                vmax,
+                float(baseline_value) + search_radius,
+            )
+
+            gene_space.append(
+                {
+                    "low": gene_low,
+                    "high": gene_high,
+                }
+            )
     def fitness_func(ga_instance, solution, solution_idx):
 
         candidate_anchors = decode_chromosome(

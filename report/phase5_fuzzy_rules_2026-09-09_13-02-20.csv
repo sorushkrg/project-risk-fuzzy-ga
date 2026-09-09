@@ -1,0 +1,40 @@
+﻿rule_id,output,samples,weighted_samples,probability,weight,conditions
+1,,1390,1384.65718495521,0.0,0.0,lOBlank=Medium; loc=Medium; v_g=Medium
+2,,1317,1217.4233593544857,0.0,0.0,b=Low; lOBlank=Low; loc=Low
+3,,747,774.2474868878235,0.0,0.0,i=High; lOBlank=High; loc=High
+4,,749,713.458673015766,0.0,0.0,b=Low; i=Medium; lOBlank=Medium; loc=Low
+5,,637,685.8350066709976,0.0,0.0,b=High; ev_g=High; i=High; loc=High; v_g=High
+6,,663,656.1007364741172,0.0,0.0,b=High; i=High; lOBlank=Medium; loc=Medium; locCodeAndComment=Low
+7,,549,516.5840965895392,0.0,0.0,b=Medium; lOBlank=Medium; loc=Low
+8,,381,391.7345133225932,0.0,0.0,b=Low; lOBlank=Low; loc=High; locCodeAndComment=Low
+9,,400,386.319558348408,0.0,0.0,b=Low; i=Low; lOBlank=Low; loc=Low
+10,,334,375.77835635046466,0.0,0.0,lOBlank=Medium; loc=Low
+11,,338,331.1983443753965,0.0,0.0,b=Low; lOBlank=Low; loc=Medium; v_g=Medium
+12,,290,318.61988705191305,0.0,0.0,b=Low; ev_g=High; loc=High; v_g=High
+13,,177,199.1400271677606,0.0,0.0,b=Low; lOBlank=Low; loc=Low
+14,,171,179.33144258334178,0.0,0.0,b=High; ev_g=Low; i=High; loc=High; v_g=High
+15,,164,174.15751901730985,0.0,0.0,i=High; lOBlank=Medium; loc=High; locCodeAndComment=High
+16,,164,169.87987369680744,0.0,0.0,ev_g=High; loc=High; v_g=High
+17,,180,168.0689800741057,0.0,0.0,lOBlank=Medium; loc=Low; v_g=Low
+18,,132,129.37437237281736,0.0,0.0,b=Low; lOBlank=Medium; loc=Low; v_g=Low
+19,,123,125.77764587399241,0.0,0.0,b=High; ev_g=High; i=High; loc=High; v_g=High
+20,,126,125.77581216082812,0.0,0.0,i=High; lOBlank=High; loc=Medium
+21,,85,95.63221643649516,0.0,0.0,ev_g=Low; loc=High
+22,,79,87.08059322181896,0.0,0.0,ev_g=Low; i=High; loc=High; v_g=Medium
+23,,88,80.09577603308536,0.0,0.0,b=Low; i=Low; lOBlank=Medium; loc=Low
+24,,70,72.90232303543549,0.0,0.0,ev_g=Low; i=High; loc=High; v_g=High
+25,,73,71.32451473050716,0.0,0.0,b=Medium; lOBlank=Low; loc=Medium
+26,,61,65.25309044350303,0.0,0.0,b=Low; lOBlank=Low; loc=Low; v_g=Low
+27,,67,64.57400533498986,0.0,0.0,lOBlank=High; loc=High
+28,,57,64.12983925741443,0.0,0.0,lOBlank=High; loc=High
+29,,61,56.69779980249825,0.0,0.0,b=Low; lOBlank=Medium; loc=Low; v_g=Low
+30,,45,41.39811214319047,0.0,0.0,b=Medium; i=Medium; lOBlank=Medium; loc=Medium; locCodeAndComment=Low
+31,,41,37.34805100096867,0.0,0.0,b=Low; i=Low; lOBlank=Low; loc=Low
+32,,30,33.75254697758659,0.0,0.0,loc=Medium
+33,,31,30.374847328942213,0.0,0.0,ev_g=Low; i=High; loc=High; v_g=Low
+34,,30,27.673787837925286,0.0,0.0,branchCount=High; ev_g=Low; i=Low; loc=High
+35,,25,26.776287116952982,0.0,0.0,branchCount=Medium; ev_g=Low; i=Low; loc=High
+36,,20,18.899470346739903,0.0,0.0,b=High; ev_g=Low; i=High; loc=High; v_g=High
+37,,18,17.54985745781359,0.0,0.0,b=Low; lOBlank=Low; loc=Medium; v_g=Low
+38,,16,14.624269977123223,0.0,0.0,i=Medium; lOBlank=Medium; loc=Medium; locCodeAndComment=High
+39,,10,9.449735173369952,0.0,0.0,branchCount=Medium; ev_g=Low; i=Low; loc=High
